@@ -2,11 +2,6 @@
 
 a.k.a my learning journal.
 
-## Purpose
-
-This repository is a collection of code I have written while learning a new language or framework. I have tried to
-document the code as well as possible.
-
 ## Contributing
 
 If you would like to contribute to this repository, please feel free to submit a pull request. I would love to see what
