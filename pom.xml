@@ -54,6 +54,11 @@
                 <groupId>com.spotify.fmt</groupId>
                 <artifactId>fmt-maven-plugin</artifactId>
                 <version>${fmt.version}</version>
+                <configuration>
+                    <verbose>
+                        true
+                    </verbose>
+                </configuration>
                 <executions>
                     <execution>
                         <phase>validate</phase>
