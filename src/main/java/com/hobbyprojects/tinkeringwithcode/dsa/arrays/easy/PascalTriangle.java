@@ -1,4 +1,4 @@
-package com.hobbyprojects.tinkeringwithcode.dsa.recursion.easy;
+package com.hobbyprojects.tinkeringwithcode.dsa.arrays.easy;
 
 import java.util.ArrayList;
 import java.util.List;
