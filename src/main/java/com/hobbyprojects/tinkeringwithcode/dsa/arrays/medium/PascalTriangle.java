@@ -1,4 +1,4 @@
-package com.hobbyprojects.tinkeringwithcode.dsa.arrays.easy;
+package com.hobbyprojects.tinkeringwithcode.dsa.arrays.medium;
 
 import java.util.ArrayList;
 import java.util.List;

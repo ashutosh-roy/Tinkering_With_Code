@@ -2,17 +2,11 @@
 
 a.k.a my learning journal.
 
-## Contributing
+## Table of Contents
 
-If you would like to contribute to this repository, please feel free to submit a pull request. I would love to see what
-you have learned!
-
-## License
-
-This repository is licensed under the [MIT License](./LICENSE).
-
-## Contact
-
-If you would like to reach out to me, you can find me on [LinkedIn](https://www.linkedin.com/in/ashutosh-roy-2001/).
-
-A Spring Boot Project with the implementation of my recent learnings.
+1. Arrays
+    * [Pascal's Traingle](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/Pascal'sTriangle.md)
+2. Sorting
+    * [Selection Sort](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/SelectionSort.md)
+    * [Bubble Sort](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/Bubble Sort.md)
+    * [Insertion Sort](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/Insertion Sort.md)
