@@ -1,16 +1,41 @@
 package com.hobbyprojects.tinkeringwithcode.dsa.sorting;
 
-/**
- * <h2>Brute Force Approach :</h2>
- * <p>Find the minimum element .</p>
- * <ul>
- *     <li>Step 1. Get each element in Pascal's triangle using {@code nCr} where {@code n} is the rowth index and {@code r} is the columnth index.
- *     <br>For e.g., For row = 5 col = 3, the element is 6 (from {@code 5C3}) <br></li>
- *     <li>Step 2. Let's calculate all the elements of a Pascal's triangle for a given row.</li>
- *     <li>Step 3. Combine all those row wise Pascal's triangle elements into a {@code List<List<Integer>>}.</li>
- * <br>
- * <h3>Time complexity : </h3><p>{@code O(n) + O(n-r) + O(r)}</p>
- * <p>
- */
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.Scanner;
+
+@Slf4j
 public class SelectionSort {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        log.info("Enter size of array :-");
+        int n = sc.nextInt();
+        int[] ar = new int[n];
+        log.info("Enter elements in the array :-");
+        for (int i = 0; i < ar.length; i++) {
+            ar[i] = sc.nextInt();
+        }
+        selectionSort(ar);
+    }
+
+    public static void selectionSort(int[] ar) {
+        int min = 0;
+        for (int i = 0; i < ar.length - 1; i++) {
+            min = i;
+            for (int j = i; j < ar.length; j++) {
+                if (ar[j] < ar[min]) {
+                    min = j;
+                }
+            }
+            int temp = ar[i];
+            ar[i] = ar[min];
+            ar[min] = temp;
+        }
+        log.info("After selection sort \n [");
+        for (int i = 0; i < ar.length; i++) {
+            log.info(ar[i] + ",");
+        }
+        log.info("]");
+    }
 }
