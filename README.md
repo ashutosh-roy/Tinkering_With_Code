@@ -7,7 +7,7 @@ a.k.a my learning journal.
 ##### Java
 
 * Java 8 Features
-    * [Streams](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/Functional Programming/Streams.md) (In
+    * [Streams](/theory/Functional Programming/Streams.md) (In
       Progress)
     * Optional (TODO)
 
@@ -16,8 +16,8 @@ a.k.a my learning journal.
 ##### DSA
 
 * Arrays
-    * [Pascal's Traingle](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/Pascal'sTriangle.md)
+    * [Pascal's Traingle](/theory/Pascal'sTriangle.md)
 * Sorting
-    * [Selection Sort](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/SelectionSort.md)
-    * [Bubble Sort](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/Bubble Sort.md) (TODO)
-    * [Insertion Sort](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/Insertion Sort.md) (TODO)
+    * [Selection Sort](/theory/SelectionSort.md)
+    * [Bubble Sort](/theory/Bubble Sort.md) (TODO)
+    * [Insertion Sort](/theory/Insertion Sort.md) (TODO)
