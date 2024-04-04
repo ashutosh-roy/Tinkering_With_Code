@@ -11,16 +11,15 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/todo")
 public class ToDoListController {
 
-    @Autowired
-    ToDoService toDoService;
+  @Autowired ToDoService toDoService;
 
-    @GetMapping
-    public void getToDos() {
-        toDoService.getToDos();
-    }
+  @GetMapping
+  public void getToDos() {
+    toDoService.getToDos();
+  }
 
-    @PostMapping
-    public ResponseEntity<ToDoResponse> addToDos(@RequestBody ToDoRequest toDoRequest) {
-        return toDoService.addToDos(toDoRequest);
-    }
+  @PostMapping
+  public ResponseEntity<ToDoResponse> addToDos(@RequestBody ToDoRequest toDoRequest) {
+    return toDoService.addToDos(toDoRequest);
+  }
 }

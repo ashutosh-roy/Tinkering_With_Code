@@ -10,15 +10,15 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ToDoService {
-    @Autowired
-    ToDoListRepository toDoListRepository;
+  @Autowired ToDoListRepository toDoListRepository;
 
-    public ResponseEntity<ToDoResponse> addToDos(ToDoRequest toDos) {
-        toDoListRepository.save(ToDoList.builder().toDos(toDos.getToDos()).build());
-        return ResponseEntity.ok().body(ToDoResponse.builder().message("TODO successfully added.").code("TWC-1").build());
-    }
+  public ResponseEntity<ToDoResponse> addToDos(ToDoRequest toDos) {
+    toDoListRepository.save(ToDoList.builder().toDos(toDos.getToDos()).build());
+    return ResponseEntity.ok()
+        .body(ToDoResponse.builder().message("TODO successfully added.").code("TWC-1").build());
+  }
 
-    public void getToDos() {
-        // TODO : content to be added later
-    }
+  public void getToDos() {
+    // TODO : content to be added later
+  }
 }

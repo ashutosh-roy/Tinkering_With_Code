@@ -6,6 +6,6 @@ import lombok.Data;
 @Builder
 @Data
 public class ToDoResponse {
-    private String code;
-    private String message;
+  private String code;
+  private String message;
 }

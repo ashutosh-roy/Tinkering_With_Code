@@ -5,10 +5,12 @@ import lombok.Getter;
 
 @Getter
 public class ToDo {
-    @JsonProperty("item")
-    String item;
-    @JsonProperty("category")
-    String category;
-    @JsonProperty("addedBy")
-    String addedBy;
+  @JsonProperty("item")
+  String item;
+
+  @JsonProperty("category")
+  String category;
+
+  @JsonProperty("addedBy")
+  String addedBy;
 }
