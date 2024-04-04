@@ -7,7 +7,7 @@ a.k.a my learning journal.
 ##### Java
 
 * Java 8 Features
-    * [Streams](/theory/Functional Programming/Streams.md) (In
+    * [Streams](/theory/FunctionalProgramming/Streams.md) (In
       Progress)
     * Optional (TODO)
 
