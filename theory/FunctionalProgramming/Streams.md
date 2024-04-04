@@ -4,7 +4,7 @@
 
 
 > Talk is cheap show me the code :) ->
-[Source Code](src/main/java/com/hobbyprojects/tinkeringwithcode/util/StreamsUtil.java)
+[Source Code](/src/main/java/com/hobbyprojects/tinkeringwithcode/util/StreamsUtil.java)
 
 ## Intermediate Operations
 
