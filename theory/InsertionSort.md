@@ -6,30 +6,29 @@
 2. Keep swapping it with the elements in the left till possible.
 3. Inner loop runs only till 1st index in order to compare b/w left and right element
 
-##### Time complexity :
-
-``` O(n^2) ```
-
 ```   
+static void insertionSort(int[] ar) {
+    for (int i = 0; i < ar.length; i++) {
+        int j = i;
         /*
          * ar[j] - Element at the right
          * ar[j-1] - Element at the left
-         */
-         
-        for (int i = 0; i < ar.length; i++) {
-            // 
-            int j = i;
-
-            while (j > 0 && ar[j - 1] > ar[j]) {
-                int temp = ar[j - 1];
-                ar[j - 1] = ar[j];
-                ar[j] = temp;
-                j--;
-            }
+         * */
+        while (j > 0 && ar[j - 1] > ar[j]) {
+            int temp = ar[j - 1];
+            ar[j - 1] = ar[j];
+            ar[j] = temp;
+            j--;
         }
-        log.info("Output of insertion sort :- ");
-        Arrays.stream(ar).forEach(System.out::println);
+    }
+    log.info("Output of insertion sort :- ");
+    Arrays.stream(ar).forEach(System.out::println);
+}
 ```
+
+##### Time complexity :
+
+``` O(n^2) ```
 
 ### References:
 
