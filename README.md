@@ -19,5 +19,5 @@ a.k.a my learning journal.
     * [Pascal's Traingle](/theory/Pascal'sTriangle.md)
 * Sorting
     * [Selection Sort](/theory/SelectionSort.md)
-    * [Bubble Sort](/theory/BubbleSort.md) (TODO)
-    * [Insertion Sort](/theory/InsertionSort.md) (TODO)
+    * [Bubble Sort](/theory/BubbleSort.md)
+    * [Insertion Sort](/theory/InsertionSort.md)
