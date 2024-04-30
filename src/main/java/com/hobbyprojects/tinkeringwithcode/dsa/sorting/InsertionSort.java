@@ -14,7 +14,7 @@ public class InsertionSort {
     }
 
     static void insertionSort(int[] ar) {
-        for (int i = 0; i < ar.length; i++) {
+        for (int i = 0; i < ar.length - 1; i++) {
             int j = i;
             /*
              * ar[j] - Element at the right

@@ -23,7 +23,8 @@ public class SelectionSort {
         int min = 0;
         for (int i = 0; i < ar.length - 1; i++) {
             min = i;
-            for (int j = i; j < ar.length; j++) {
+            System.out.println("min = " + min);
+            for (int j = i + 1; j < ar.length; j++) {
                 if (ar[j] < ar[min]) {
                     min = j;
                 }

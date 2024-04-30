@@ -2,7 +2,7 @@
 
 ### Optimal Force Approach :
 
-* Find the minimum element in the entire array and swap it with the current element
+* We'll swap the array till maximum element reaches the end.
 * The point to remember is that the outer loop will always run till n-1.
 * Inner loop will always run till n-i-1. Why ? coz the elements at the end of the array are already swapped.
 
