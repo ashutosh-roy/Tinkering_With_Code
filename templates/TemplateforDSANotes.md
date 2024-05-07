@@ -8,7 +8,7 @@ Insert your approach here
 
 ``` Insert time complexity here```
 
-### Optimal Force Approach :
+### Optimal Approach :
 
 Insert your approach here
 
