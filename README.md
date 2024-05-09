@@ -4,6 +4,11 @@ a.k.a my learning journal.
 
 ## Table of Contents
 
+##### Templates
+
+* [Boilerplate Code For DSA](templates/BolierplateCode.md)
+* [Boilerplate for Notes](templates/TemplateforDSANotes.md)
+
 ##### Java
 
 * Java 8 Features
@@ -15,13 +20,24 @@ a.k.a my learning journal.
 
 ##### DSA
 
+* [Bit Manipulation]()
+    * [base 2 and base 10 conversion of a number]()
+    * 1s and 2s Compliment
+    * Must know tricks in Bit Manipulation
+    * Minimum Bit Flips to convert number
+    * Power Set
+    * Single Number 1
+    * Single Number 2
+    * Single Number 3
+    * XOR of numbers of given range
+    * Divide two integers without using multiplication and division operators
 * Arrays
-    * [Pascal's Traingle](/theory/Pascal'sTriangle.md)
   > Easy
     * Largest Element in an Array
     * [Second-Largest Element in an Array without sorting](theory/Array/SecondLargestAndSmallestElementWithoutSorting.md)
     * Check if the array is sorted
     * Remove duplicates from Sorted array
+    * Check if array is sorted and rotated
     * Left Rotate an array by one place
     * Left rotate an array by D places
     * Move Zeros to end
@@ -32,8 +48,9 @@ a.k.a my learning journal.
   > Medium
     * Find the Union
     * Find the number that appears once, and other numbers twice.
-    * Longest subarray with given sum K(positives)
-    * Longest subarray with sum K (Positives + Negatives)
+    * [Pascal's Traingle](/theory/Pascal'sTriangle.md)
+    * [Longest subarray with given sum K(positives)](theory/Array/Subarray.md)
+    * [Longest subarray with sum K (Positives + Negatives)](theory/Array/Subarray.md)
 
 * Sorting
     * [Selection Sort](/theory/SelectionSort.md)
