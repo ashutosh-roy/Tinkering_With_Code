@@ -42,7 +42,7 @@
 ### Optimised Approach :
 
 * Use Dutch National Flag
-  Algorithm ([reference](https://takeuforward.org/data-structure/sort-an-array-of-0s-1s-and-2s/))
+  Algorithm ([striver's reference](https://takeuforward.org/data-structure/sort-an-array-of-0s-1s-and-2s/))
 
 ``` 
 public static void sortColorsOptimised(int[] nums) {
