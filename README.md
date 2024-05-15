@@ -48,11 +48,11 @@ a.k.a my learning journal.
   > Medium
     * Find the Union
     * Find the number that appears once, and other numbers twice.
-    * [Pascal's Traingle](/theory/Pascal'sTriangle.md)
+    * [Pascal's Traingle](/theory/Array/Pascal'sTriangle.md)
     * [Longest subarray with given sum K(positives)](theory/Array/Subarray.md)
     * [Longest subarray with sum K (Positives + Negatives)](theory/Array/Subarray.md)
 
 * Sorting
-    * [Selection Sort](/theory/SelectionSort.md)
-    * [Bubble Sort](/theory/BubbleSort.md)
-    * [Insertion Sort](/theory/InsertionSort.md)
+    * [Selection Sort](/theory/Sorting/SelectionSort.md)
+    * [Bubble Sort](/theory/Sorting/BubbleSort.md)
+    * [Insertion Sort](/theory/Sorting/InsertionSort.md)

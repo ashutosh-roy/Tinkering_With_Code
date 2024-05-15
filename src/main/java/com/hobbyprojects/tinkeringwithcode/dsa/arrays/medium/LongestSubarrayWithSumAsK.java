@@ -10,8 +10,8 @@ import java.util.Map;
 public class LongestSubarrayWithSumAsK {
 
     public static void main(String[] args) {
-        int k = 3;
-        int[] num = new int[]{2, 0, 0, 3};
+        int k = 6;
+        int[] num = new int[]{3, 2, 3};
         log.info("Max Subarray Length = %s".formatted(subarraySumUsingHashing(num, k)));
         log.info("Max Subarray with Two Pointers Length = %s".formatted(subarraySumUsingTwoPointers(num, k)));
     }

@@ -1,15 +1,15 @@
-//package com.hobbyprojects.tinkeringwithcode.dsa.arrays.easy;
-//
-//import lombok.extern.slf4j.Slf4j;
-//
-//@Slf4j
-//@Deprecated
-//public class LargestElementInAnArray {
-//    public static void main(String[] args) {
-//        int[] ar = {12, 24, 81, 9};
+package com.hobbyprojects.tinkeringwithcode.dsa.arrays.easy;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Deprecated
+public class LargestElementInAnArray {
+    public static void main(String[] args) {
+        int[] ar = {12, 24, 81, 9};
 //        log.info("Largest element via Selection Sort :- {}".formatted(findLargestElementInAnArray("SELECTION_SORT", ar)));
-//    }
-//
+    }
+
 //    private static int findLargestElementInAnArray(String choice, int[] ar) {
 //        return switch(choice){
 //            case "SELECTION_SORT":
@@ -44,4 +44,4 @@
 //        }
 //        return;
 //    }
-//}
+}
