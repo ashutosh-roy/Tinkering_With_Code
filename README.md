@@ -53,6 +53,8 @@ a.k.a my learning journal.
     * [Longest subarray with sum K (Positives + Negatives)](theory/Array/Subarray.md)
     * [Sort Arrays of 0s, 1s and 2s](theory/Array/Sort_Arrays_Of_0s_1s_2s_(Dutch_National_Flag_Algorithm).md)
     * [Find the majority element](theory/Array/Moore's_Voting_Algorithm.md)
+    * [Find maximum sum for subarray](theory/Array/Subarray.md)
+    * Stock Buy and Sell
 
 * Sorting
     * [Selection Sort](/theory/Sorting/SelectionSort.md)
