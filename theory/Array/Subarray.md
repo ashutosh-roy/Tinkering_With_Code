@@ -115,6 +115,42 @@ ____
  O(n) - since maximum prefix sum that can be stored is for 'n' elements
 ```
 
+____
+
+> Scenario 3 : Maximum Sum K of Subarray 
+
+##### Psuedocode
+
+* Discard the sum with -ve values
+* Find max among sum of existing elements 
+
+##### Source Code
+
+```
+    private static int findMaximumSubarrayWithSumK(int[] nums) {
+        int i, j, n = nums.length, maxSum = Integer.MIN_VALUE;
+        for(i=0;i<n;i++)
+        {
+            int sum = 0;
+            for(j=i;j<n;j++)
+            {
+                sum = sum + nums[j];
+                maxSum = Math.max(sum, maxSum);
+            }
+        }
+        return maxSum;
+    }
+```
+
+``` 
+ Time complexity :
+ O(n * 1) - in best case
+ 
+ Space complexity :
+ O(1) - since we're not using extra space
+```
+
+
 ### References:
 
 [Video Reference](https://www.youtube.com/watch?v=frf7qxiN2qU&t=1596s)
@@ -122,3 +158,5 @@ ____
 [For sum with k, Article reference ](https://takeuforward.org/data-structure/longest-subarray-with-given-sum-k/)
 
 [For +ves and -ves, Article reference ](https://takeuforward.org/arrays/longest-subarray-with-sum-k-postives-and-negatives/)
+
+[Get maximum sum from a subarray](https://takeuforward.org/data-structure/kadanes-algorithm-maximum-subarray-sum-in-an-array/)
