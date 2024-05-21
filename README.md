@@ -26,17 +26,6 @@ a.k.a my learning journal.
 
 ##### DSA
 
-* [Bit Manipulation]()
-    * [base 2 and base 10 conversion of a number]()
-    * 1s and 2s Compliment
-    * Must know tricks in Bit Manipulation
-    * Minimum Bit Flips to convert number
-    * Power Set
-    * Single Number 1
-    * Single Number 2
-    * Single Number 3
-    * XOR of numbers of given range
-    * Divide two integers without using multiplication and division operators
 * Arrays
   > Easy
     * Largest Element in an Array
@@ -71,3 +60,15 @@ a.k.a my learning journal.
     * [Selection Sort](/theory/Sorting/SelectionSort.md)
     * [Bubble Sort](/theory/Sorting/BubbleSort.md)
     * [Insertion Sort](/theory/Sorting/InsertionSort.md)
+
+* [Bit Manipulation]()
+    * [base 2 and base 10 conversion of a number]()
+    * 1s and 2s Compliment
+    * Must know tricks in Bit Manipulation
+    * Minimum Bit Flips to convert number
+    * Power Set
+    * Single Number 1
+    * Single Number 2
+    * Single Number 3
+    * XOR of numbers of given range
+    * Divide two integers without using multiplication and division operators
