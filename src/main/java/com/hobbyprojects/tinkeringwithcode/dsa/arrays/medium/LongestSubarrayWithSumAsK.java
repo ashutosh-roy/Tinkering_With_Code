@@ -5,7 +5,10 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * <h3>Time Complexity :</h3> O(n) <br><br>
+ * <h3>Space Complexity :</h3> O(1)
+ */
 @Slf4j
 public class LongestSubarrayWithSumAsK {
 

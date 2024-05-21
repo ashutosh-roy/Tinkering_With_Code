@@ -9,6 +9,12 @@ a.k.a my learning journal.
 * [Boilerplate Code For DSA](templates/BolierplateCode.md)
 * [Boilerplate for Notes](templates/TemplateforDSANotes.md)
 
+##### DSA Sheet For Tracking Progress
+
+* [Progress Tracker](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=0)
+* [DSA Topics](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=1325411286)
+* [Patterns found in DSA problems](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=96114204)
+
 ##### Java
 
 * Java 8 Features
@@ -54,7 +60,12 @@ a.k.a my learning journal.
     * [Sort Arrays of 0s, 1s and 2s](theory/Array/Sort_Arrays_Of_0s_1s_2s_(Dutch_National_Flag_Algorithm).md)
     * [Find the majority element](theory/Array/Moore's_Voting_Algorithm.md)
     * [Find maximum sum for subarray](theory/Array/Subarray.md)
-    * Stock Buy and Sell
+    * [Stock Buy and Sell](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/medium/StockBuyAndSell.java)
+    * [Rearrange elements by sign](theory/Array/RearrangeElementsBySign.md)
+    * [Next Permutation](theory/Array/NextPermutation.md)
+    * Leaders in an array problem
+    * [Longest Consecutive Sequence In An Array](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/medium/LongestConsecutiveSequence.java)
+    * Set Matrix Zeroes
 
 * Sorting
     * [Selection Sort](/theory/Sorting/SelectionSort.md)
