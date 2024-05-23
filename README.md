@@ -7,7 +7,7 @@ a.k.a my learning journal.
 ##### Templates
 
 * [Boilerplate Code For DSA](templates/BolierplateCode.md)
-* [Boilerplate for Notes](templates/TemplateforDSANotes.md)
+* [Boilerplate for Notes](templates/v1_TemplateforDSANotes.md)
 
 ##### DSA Sheet For Tracking Progress
 
@@ -54,7 +54,9 @@ a.k.a my learning journal.
     * [Next Permutation](theory/Array/NextPermutation.md)
     * Leaders in an array problem
     * [Longest Consecutive Sequence In An Array](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/medium/LongestConsecutiveSequence.java)
-    * Set Matrix Zeroes
+    * [Set Matrix Zeroes](theory/Array/Matrix.md)
+    * [Spiral Traversal Of Matrix](theory/Array/Matrix.md)
+    * [Rotate Image by 90 degrees](theory/Array/Matrix.md)
 
 * Sorting
     * [Selection Sort](/theory/Sorting/SelectionSort.md)
