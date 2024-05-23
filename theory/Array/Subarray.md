@@ -7,11 +7,65 @@ A subarray is a contiguous non-empty sequence of elements within an array.
 What is Prefix Sum ?
 E.g., For given array, [10, 20, 30, 40], prefix sum is [10, 30, 60, 100]
 
-### Type of Problems :
+## Type of Problems
+
+### : In Brief :
 
 ##### Longest Subarray Scenarios covered :
 
-> Scenario 1 : for arrays with elements having +ve values and 0s, use two pointer
+> Scenario 1 : Find longest subarray with sum 'K' for arrays with elements having +ve values and 0s
+
+- use two pointer
+
+> Scenario 2 : Find longest subarray with sum 'K' for arrays with elements having -ve values,
+
+- use hashmap with prefix sum
+
+____
+
+##### Maximum Sum of Subarray Scenarios covered :
+
+> Scenario 1 : For Maximum Sum K of Subarray,
+
+- use Kadene's algorithm
+- Step 1 : keep calculating the max(sum)
+- Step 2 : if prefixSum is -ve then make it zero
+  ```
+  This order is important coz if input is ([-1] i.e., just a -ve number) then
+  Output -> 0 (wrong) 
+  Output -> -1 (correct) (coz order of steps maintained)
+  ```
+
+Solve for edge-cases : [-1], [-3,-1,-1]
+____
+
+> Scenario 2 : For Maximum Product K of Subarray
+
+- calculate PRODUCT from 0th and (n-1)th index
+- Step 1 : if leftProduct (i.e., from (0 to i)th index is 0 then initialise it as 1)
+- Step 2 : if rightProduct (i.e., from (n-1 to 0)th index is 0 then initialise it as 1)
+- Step 3 : take max(answer, max(leftProd, rightProd))
+
+Solve for edge-cases : [-1], [-3,-1,-1]
+____
+
+
+> Scenario 3 : For Maximum Absolute Sum of Subarray,
+
+- Step 1 : Find maximum element using Kadene's algo
+- Step 2 : Find minimum element using Kadene's algo
+- Step 3 : Find absolute values of max and min
+- Step 4 : Find MAX of the above two values
+
+Solve for edge-cases : [1,-3,2,3,-4]
+
+____
+
+### : In Depth :
+
+##### Longest Subarray Scenarios covered :
+
+> Scenario 1 : Find longest subarray with sum 'K' for arrays with elements having +ve values and 0s
 
 ##### Psuedocode
 
@@ -66,7 +120,7 @@ public static int subarraySumUsingTwoPointers(int[] nums, int k) {
 
 ____
 
-> Scenario 2 : for arrays with elements having -ve values, use hashmap with prefix sum
+> Scenario 2 : Find longest subarray with sum 'K', for arrays with elements having -ve values
 
 ##### Psuedocode
 
@@ -117,39 +171,134 @@ ____
 
 ____
 
-> Scenario 3 : Maximum Sum K of Subarray 
+##### Maximum Subarray Scenarios covered :
+
+> Scenario 1 : Maximum Sum K of Subarray
 
 ##### Psuedocode
 
 * Discard the sum with -ve values
-* Find max among sum of existing elements 
+* Find max among sum of existing elements
 
 ##### Source Code
 
 ```
-    private static int findMaximumSubarrayWithSumK(int[] nums) {
-        int i, j, n = nums.length, maxSum = Integer.MIN_VALUE;
-        for(i=0;i<n;i++)
+    public int maxSubArray(int[] nums) {
+        int i=0, n=nums.length, sum=0, max = Integer.MIN_VALUE;
+        while(i<n)
         {
-            int sum = 0;
-            for(j=i;j<n;j++)
+            sum+=nums[i];
+            max = Math.max(max, sum);
+            if(sum<0)
             {
-                sum = sum + nums[j];
-                maxSum = Math.max(sum, maxSum);
+                sum=0;
             }
+            i++;
         }
-        return maxSum;
+        return max;
     }
 ```
 
 ``` 
  Time complexity :
- O(n * 1) - in best case
+ O(n)
  
  Space complexity :
  O(1) - since we're not using extra space
 ```
 
+___
+
+> Scenario 2 : Maximum Product K of Subarray
+
+##### Psuedocode
+
+- Step 1 : if leftProduct (i.e., from (0 to i)th index is 0 then initialise it as 1)
+- Step 2 : if rightProduct (i.e., from (n-1 to 0)th index is 0 then initialise it as 1)
+- Step 3 : take max(answer, max(leftProd, rightProd))
+
+##### Source Code
+
+```
+    public int maxProduct(int[] nums) {
+        int i, n = nums.length;
+        int leftProduct = 1, rightProduct = 1, maxProduct = Integer.MIN_VALUE;
+        for(i=0;i<n;i++)
+        {
+            if(leftProduct == 0)
+            leftProduct = 1;
+            if(rightProduct == 0)
+            rightProduct = 1;
+
+            leftProduct *= nums[i];
+            rightProduct *= nums[n-1-i];
+            maxProduct = Math.max(maxProduct, Math.max(leftProduct, rightProduct));
+        }
+        return maxProduct;
+    }
+```
+
+``` 
+ Time complexity :
+ O(n)
+ 
+ Space complexity :
+ O(1) - since we're not using extra space
+```
+
+____
+
+> Scenario 3 : Maximum Absolute Sum K of Subarray
+
+##### Psuedocode
+
+- Step 1 : Find maximum element using Kadene's algo
+- Step 2 : Find minimum element using Kadene's algo
+- Step 3 : Find absolute values of max and min
+- Step 4 : Find MAX of the above two values
+
+##### Source Code
+
+```
+    public int maxAbsoluteSum(int[] nums) {
+        int i,j, sum=0;
+        int max =Integer.MIN_VALUE;
+        int min =Integer.MAX_VALUE;
+        int n = nums.length;
+        // Find maximum element using Kadene's algo 
+        for(i=0;i<n;i++)
+        {
+            sum+=nums[i];
+            min = Math.min(min, sum);
+            if(sum>0)
+            {
+                sum = 0;
+            }
+        }
+        sum = 0;
+        // Find minimum element using Kadene's algo 
+        for(i=0;i<n;i++)
+        {
+            sum+=nums[i];
+            max = Math.max(max, sum);
+            if(sum<0)
+            {
+                sum = 0;
+            }
+        }
+        // Find absolute values of max and min
+        // Find MAX of the above two values
+        return Math.max(Math.abs(max),Math.abs(min));
+    }
+```
+
+``` 
+ Time complexity :
+ O(n)
+ 
+ Space complexity :
+ O(1) - since we're not using extra space
+```
 
 ### References:
 
@@ -160,3 +309,7 @@ ____
 [For +ves and -ves, Article reference ](https://takeuforward.org/arrays/longest-subarray-with-sum-k-postives-and-negatives/)
 
 [Get maximum sum from a subarray](https://takeuforward.org/data-structure/kadanes-algorithm-maximum-subarray-sum-in-an-array/)
+
+[maximum-product-any-subarray](https://leetcode.com/problems/maximum-product-subarray/solutions/5180066/maximum-product-subarray-using-two-pointers-and-kadane-s-tc-o-n-sc-o-1/)
+
+[maximum-absolute-sum-of-any-subarray](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/solutions/3002753/simple-java-solution/)
