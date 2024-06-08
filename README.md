@@ -4,27 +4,11 @@ a.k.a my learning journal.
 
 ## Table of Contents
 
-##### Templates
+### System Design
 
-* [Boilerplate Code For DSA](templates/BolierplateCode.md)
-* [Boilerplate for Notes](templates/v1_TemplateforDSANotes.md)
+[Scale from Zero to Million Users](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/SystemDesign/Alex Xu Vol1 Notes/Chapter 1/Scale From Zero to Millions of Users.md)
 
-##### DSA Sheet For Tracking Progress
-
-* [Progress Tracker](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=0)
-* [DSA Topics](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=1325411286)
-* [Patterns found in DSA problems](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=96114204)
-
-##### Java
-
-* Java 8 Features
-    * [Streams](/theory/FunctionalProgramming/Streams.md) (In
-      Progress)
-    * Optional (TODO)
-
-* Design Patterns (TODO)
-
-##### DSA
+### DSA
 
 * Arrays
   > Easy
@@ -74,3 +58,25 @@ a.k.a my learning journal.
     * Single Number 3
     * XOR of numbers of given range
     * Divide two integers without using multiplication and division operators
+
+### Miscelleaneous
+
+##### Java
+
+* Java 8 Features
+    * [Streams](/theory/FunctionalProgramming/Streams.md) (In-progress)
+      Progress)
+    * Optional (TODO)
+
+* Design Patterns (TODO)
+
+##### Templates
+
+* [Boilerplate Code For DSA](templates/BolierplateCode.md)
+* [Boilerplate for Notes](templates/v1_TemplateforDSANotes.md)
+
+##### DSA Sheet For Tracking Progress
+
+* [Progress Tracker](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=0)
+* [DSA Topics](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=1325411286)
+* [Patterns found in DSA problems](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=96114204)
