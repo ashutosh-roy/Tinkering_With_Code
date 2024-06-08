@@ -6,7 +6,7 @@ a.k.a my learning journal.
 
 ### System Design
 
-[Scale from Zero to Million Users](/Users/ashu/Documents/Projects/Tinkering_With_Code/theory/SystemDesign/Alex Xu Vol1 Notes/Chapter 1/Scale From Zero to Millions of Users.md)
+[Scale from Zero to Million Users](theory/SystemDesign/Alex Xu Vol1 Notes/Chapter 1/Scale From Zero to Millions of Users.md)
 
 ### DSA
 
