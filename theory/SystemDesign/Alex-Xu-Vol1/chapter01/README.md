@@ -5,6 +5,7 @@ Here, we're building a system that supports a few users & gradually scale it to 
 # Step 1 : Single server setup
 
 ![single-server-setup](images/single-server-setup.png)
+
 To start off, we're going to put everything on a single server - web app, database, cache, etc.
 
 What's the request flow in there?
@@ -58,6 +59,19 @@ MySQL: Used in many web applications for structured data storage, such as WordPr
 - NoSQL databases are grouped into four categories - key-value stores, graph stores, column stores & document stores.
   Join operations are generally not supported.
 
+> Key-Value Stores:
+  Redis: Redis is a popular open-source, in-memory data structure store used as a database, cache, and message broker.
+
+> Graph Stores:
+Neo4j: Neo4j is a widely used graph database management system known for its native graph storage and processing.
+
+> Column Stores:
+Cassandra: Apache Cassandra is a distributed NoSQL database management system known for its robust support for handling large amounts of data across many commodity servers.
+
+> Document Stores:
+MongoDB: MongoDB is a popular document-oriented NoSQL database program that uses JSON-like documents with schema.
+
+
 - Most popular NoSQL DBs - CouchDB, Neo4J, Cassandra, HBase, DynamoDB
 
 ##### Advantages:
@@ -92,26 +106,11 @@ Relational: Facebook might use MySQL for structured data like user profiles and 
 Non-Relational: Facebook's real-time analytics or caching systems could leverage Redis for storing session data or
 caching.
 
-###### IoT Applications:
-
-Relational: A monitoring system tracking sensor readings might use SQL databases for structured data storage and
-historical analysis.
-
-Non-Relational: MongoDB could be used to store sensor data directly, as it can handle varying schema and large volumes
-of unstructured data.
-
-###### E-commerce Platforms:
-
-Relational: Product catalogs, order histories, and user accounts in an e-commerce site are typically managed using
-relational databases like PostgreSQL or MySQL.
-
-Non-Relational: Redis might be used for caching frequently accessed product details or session data to enhance
-performance.
-
 In summary, the choice between relational and non-relational databases depends on factors like data structure,
 scalability requirements, and the nature of queries expected. Relational databases excel in structured data and complex
 querying, while non-relational databases offer flexibility and scalability for handling diverse data types and high
 volumes.
+
 
 # Step 3 :  Vertical scaling vs. horizontal scaling
 
