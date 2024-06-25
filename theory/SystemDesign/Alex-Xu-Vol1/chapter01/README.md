@@ -4,8 +4,8 @@ Here, we're building a system that supports a few users & gradually scale it to 
 
 # Step 1 : Single server setup
 
-To start off, we're going to put everything on a single server - web app, database, cache, etc.
 ![single-server-setup](images/single-server-setup.png)
+To start off, we're going to put everything on a single server - web app, database, cache, etc.
 
 What's the request flow in there?
 
@@ -20,6 +20,7 @@ What's the request flow in there?
 
 As the user base grows, storing everything on a single server is insufficient.
 We can separate our database on another server so that it can be scaled independently from the web tier:
+
 ![database-separate-from-web](images/database-separate-from-web.png)
 
 ## Which databases to use?
@@ -31,12 +32,26 @@ You can choose either a traditional relational database or a non-relational (NoS
 - represent & store data in tables & rows. You can join different tables to represent aggregate
   objects.
 
-- Most popular relational DBs - MySQL, Oracle, PostgreSQL.
+- Most popular relational DBs - MySQL, Oracle, PostgresSQL.
 
-##### Advantages
+##### Advantages:
 
-- For most use-cases, relational databases are the best option as they've been around the most & have worked quite well
-  historically.
+- Structured Data: Data is organized in tables with rows and columns, enforcing a strict schema.
+
+- ACID Compliance: Transactions are Atomic, Consistent, Isolated, and Durable, ensuring data integrity.
+
+- Flexible Querying: SQL allows complex queries and joins across tables, making it powerful for analytical purposes.
+
+##### Disadvantages:
+
+- Scalability: Scaling vertically (adding more resources to a single machine) can be expensive and has limits.
+
+- Schema Rigidity: Changes to the schema can be complex and may require downtime or careful planning.
+
+```
+Example: 
+MySQL: Used in many web applications for structured data storage, such as WordPress.
+```
 
 ### Non-relational DBs
 
@@ -45,14 +60,58 @@ You can choose either a traditional relational database or a non-relational (NoS
 
 - Most popular NoSQL DBs - CouchDB, Neo4J, Cassandra, HBase, DynamoDB
 
-##### Advantages
+##### Advantages:
 
 If not suitable though, it might be worth exploring NoSQL databases. They might be a better option if:
 
-* Application requires super-low latency.
-* Data is unstructured or you don't need any relational data.
-* You only need to serialize/deserialize data (JSON, XML, YAML, etc).
+* Schema Flexibility: Can handle semi-structured and unstructured data, allowing for agile development.
+* Scalability: Designed for horizontal scaling across distributed systems, making it easier to handle large volumes of
+  data.
 * You need to store a massive amount of data.
+
+##### Disadvantages:
+
+* Consistency Trade-offs: Often sacrifices strict consistency for availability and partition tolerance (CAP theorem).
+
+* Limited Query Capabilities: Not all NoSQL databases support complex queries and joins like SQL.
+
+``` 
+Examples:
+
+MongoDB: Document-oriented database used for managing semi-structured data, such as in content management systems.
+Redis: Key-value store used for caching and real-time analytics, where schema flexibility and high-speed data retrieval
+are critical.
+```
+
+##### Real-life Examples for Relational vs Non-relational
+
+###### Social Media Platforms:
+
+Relational: Facebook might use MySQL for structured data like user profiles and relationships.
+
+Non-Relational: Facebook's real-time analytics or caching systems could leverage Redis for storing session data or
+caching.
+
+###### IoT Applications:
+
+Relational: A monitoring system tracking sensor readings might use SQL databases for structured data storage and
+historical analysis.
+
+Non-Relational: MongoDB could be used to store sensor data directly, as it can handle varying schema and large volumes
+of unstructured data.
+
+###### E-commerce Platforms:
+
+Relational: Product catalogs, order histories, and user accounts in an e-commerce site are typically managed using
+relational databases like PostgreSQL or MySQL.
+
+Non-Relational: Redis might be used for caching frequently accessed product details or session data to enhance
+performance.
+
+In summary, the choice between relational and non-relational databases depends on factors like data structure,
+scalability requirements, and the nature of queries expected. Relational databases excel in structured data and complex
+querying, while non-relational databases offer flexibility and scalability for handling diverse data types and high
+volumes.
 
 # Step 3 :  Vertical scaling vs. horizontal scaling
 

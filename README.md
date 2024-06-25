@@ -10,6 +10,19 @@ a.k.a my learning journal.
 
 ### DSA
 
+Random Necessary Tidbits
+
+* Auxiliary space complexity : refers to the extra space or memory required by an algorithm apart from the input size.
+* To reduce the size of number to fit the integer bit range, we use number % MOD where mod = (int) 1e9 + 7;
+* Integer.MAX_VALUE -> (2^31-1 = 2147483647)
+* Integer.MIN_VALUE -> (-2^31 = -2147483648)
+
+___
+
+* Recursion
+  > Medium
+    * [Count Good Numbers](theory/Recursion/CountGoodNumbers.md)
+    * [String to Integer (atoi)]()
 * Arrays
   > Easy
     * Largest Element in an Array
@@ -24,23 +37,23 @@ a.k.a my learning journal.
     * Find missing number in an array
     * Maximum Consecutive Ones
 
-  > Medium
-    * Find the Union
-    * Find the number that appears once, and other numbers twice.
-    * [Pascal's Traingle](/theory/Array/Pascal'sTriangle.md)
-    * [Longest subarray with given sum K(positives)](theory/Array/Subarray.md)
-    * [Longest subarray with sum K (Positives + Negatives)](theory/Array/Subarray.md)
-    * [Sort Arrays of 0s, 1s and 2s](theory/Array/Sort_Arrays_Of_0s_1s_2s_(Dutch_National_Flag_Algorithm).md)
-    * [Find the majority element](theory/Array/Moore's_Voting_Algorithm.md)
-    * [Find maximum sum for subarray](theory/Array/Subarray.md)
-    * [Stock Buy and Sell](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/medium/StockBuyAndSell.java)
-    * [Rearrange elements by sign](theory/Array/RearrangeElementsBySign.md)
-    * [Next Permutation](theory/Array/NextPermutation.md)
-    * Leaders in an array problem
-    * [Longest Consecutive Sequence In An Array](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/medium/LongestConsecutiveSequence.java)
-    * [Set Matrix Zeroes](theory/Array/Matrix.md)
-    * [Spiral Traversal Of Matrix](theory/Array/Matrix.md)
-    * [Rotate Image by 90 degrees](theory/Array/Matrix.md)
+> Medium
+> * Find the Union
+> * Find the number that appears once, and other numbers twice.
+> * [Pascal's Traingle](/theory/Array/Pascal'sTriangle.md)
+> * [Longest subarray with given sum K(positives)](theory/Array/Subarray.md)
+> * [Longest subarray with sum K (Positives + Negatives)](theory/Array/Subarray.md)
+> * [Sort Arrays of 0s, 1s and 2s](theory/Array/Sort_Arrays_Of_0s_1s_2s_(Dutch_National_Flag_Algorithm).md)
+> * [Find the majority element](theory/Array/Moore's_Voting_Algorithm.md)
+> * [Find maximum sum for subarray](theory/Array/Subarray.md)
+> * [Stock Buy and Sell](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/medium/StockBuyAndSell.java)
+> * [Rearrange elements by sign](theory/Array/RearrangeElementsBySign.md)
+> * [Next Permutation](theory/Array/NextPermutation.md)
+> * Leaders in an array problem
+> * [Longest Consecutive Sequence In An Array](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/medium/LongestConsecutiveSequence.java)
+> * [Set Matrix Zeroes](theory/Array/Matrix.md)
+> * [Spiral Traversal Of Matrix](theory/Array/Matrix.md)
+> * [Rotate Image by 90 degrees](theory/Array/Matrix.md)
 
 * Sorting
     * [Selection Sort](/theory/Sorting/SelectionSort.md)
