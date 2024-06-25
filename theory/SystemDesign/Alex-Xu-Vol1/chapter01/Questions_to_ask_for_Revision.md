@@ -19,7 +19,7 @@
 ###### Caching
 1. Diagram which illustrates the use of caching
 2. What are the considerations that we need to make while designing the caching system?
-3. 
+
 ###### Content Delivery Network
 
 ###### Stateless web tier
