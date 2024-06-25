@@ -4,6 +4,7 @@ a.k.a my learning journal.
 
 ## Table of Contents
 
+
 ### System Design
 
 [Scale from Zero to Million Users](theory/SystemDesign/Alex-Xu-Vol1/chapter01/README.md)
@@ -93,3 +94,6 @@ ___
 * [Progress Tracker](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=0)
 * [DSA Topics](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=1325411286)
 * [Patterns found in DSA problems](https://docs.google.com/spreadsheets/d/1eOiocrhZYlWQHIePjip2fmdI0QLYoRncZ6so_8fcr7g/edit#gid=96114204)
+
+##### Resources to be referred : 
+https://leetcode.com/discuss/interview-question/5366542/all-leetcode-articles-on-coding-patterns-summarized-in-one-page
