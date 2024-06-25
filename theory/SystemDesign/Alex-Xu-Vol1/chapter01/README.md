@@ -140,23 +140,22 @@ Horizontal scaling == scale out. Add more servers to your pool of resources.
 - It handles requests in remote procedure calls (which is network calls) which is slow.
 - Data inconsistency since there are a lot of servers
 
-# Step 4 : Load balancer (start from here tomorrow)
+# Step 4 : Load balancer
 
 #### Why is it needed?
 
 In design so far, the server going down (ie due to failure or overload) means the whole application goes down with it.
-A good solution for this problem is to use a load balancer.
 
-A load balancer evenly distributes incoming traffic among web servers in a load-balanced set:
-![load-balancer-example](images/load-balancer-example.png)
-
-Clients connect to the public IP of the load balancer. Web servers are unreachable by clients directly.
-Instead, they have private IPs, which the load balancer has access to.
-
+###### Result :- 
 By adding a load balancer, we successfully made our web tier more available and we also added possibility for fail over.
 
-How it works?
+A load balancer evenly distributes incoming traffic among web servers in a load-balanced set:
 
+![load-balancer-example](images/load-balancer-example.png)
+
+How it works?
+* Clients connect to the `public IP of the load balancer`. Web servers are unreachable by clients directly.
+  `Instead, they have private IPs, which the load balancer has access to.`
 * If server 1 goes down, all traffic will be routed to server 2. This prevents website from going offline. We'll also
   add a fresh new server to balance the load.
 * If website traffic spikes and two servers are not sufficient to handle traffic, load balancer can handle this
@@ -173,6 +172,7 @@ A master database generally only supports writes. Slave databases store copies o
 support read operations.
 This setup works well for most applications as there's usually a higher read to write ratio. Reads can easily be scaled
 by adding more slave instances.
+
 ![master-slave-replication](images/master-slave-replication.png)
 
 Advantages:
@@ -186,7 +186,8 @@ So what if one database goes offline?
 * If slave database goes offline, read operations are routed to the master/other slaves temporarily.
 * If master goes down, a slave instance will be promoted to the new master. A new slave instance will replace the old
   master.
-  ![master-slave-db-replication](images/master-slave-db-replication.png)
+
+![master-slave-db-replication](images/master-slave-db-replication.png)
 
 Here's the refined request lifecycle:
 
@@ -197,18 +198,13 @@ Here's the refined request lifecycle:
 
 Sweet, let's now improve the load/response time by adding a cache & shifting static content to a CDN.
 
-# Cache
+# Step 6:  Cache
 
-Cache is a temporary storage which stores frequently accessed data or results of expensive computations.
-
-In our web application, every time a web page is loaded, expensive queries are sent to the database.
-We can mitigate this using a cache.
-
-## Cache tier
-
-The cache tier is a temporary storage layer, from which results are fetched much more rapidly than from within a
+The cache tier is a temporary storage layer
+* It stores frequently accessed data or results of expensive computations.
+* from which results are fetched much more rapidly than from within a
 database.
-It can also be scaled independently from the database.
+It can also be scaled independently of the database.
 ![cache-tier](images/cache-tier.png)
 
 The example above is a read-through cache - server checks if data is available in the cache. If not, data is fetched
@@ -225,16 +221,19 @@ from the database.
 * Mitigating failures - A single cache server could be a single point of failure (SPOF). Consider over-provisioning it
   with a lot of memory and/or provisioning servers in multiple locations.
 * Eviction policy - What happens when you want to add items to a cache, but it's full? Cache eviction policy controls
-  that. Common policies - LRU, LFU, FIFO.
+  that. Common policies - LRU (Least Recently Used), LFU (Least Frequently Used), FIFO (First In First Out).
 
-# Content Delivery Network (CDN)
+# Content Delivery Network (CDN) (Start From Here Next)
 
 CDN == network of geographically dispersed servers, used for delivering static content - eg images, HTML, CSS, JS files.
 
 Whenever a user requests some static content, the CDN server closest to the user serves it:
+
 ![cdn](images/cdn.png)
 
+
 Here's the request flow:
+
 ![cdn-request-flow](images/cdn-request-flow.png)
 
 * User tries fetching an image via URL. URLs are provided by the CDN, eg `https://mysite.cloudfront.net/logo.jpg`
