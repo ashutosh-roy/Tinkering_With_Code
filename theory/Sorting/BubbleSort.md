@@ -26,6 +26,10 @@ static void bubbleSort(int[] ar) {
 
 ``` O(n^2)```
 
+##### Space complexity :
+
+``` O(1) : Constant```
+
 ### References:
 
 [Video Reference](https://www.youtube.com/watch?v=HGk_ypEuS24)

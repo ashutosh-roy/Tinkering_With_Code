@@ -4,7 +4,8 @@
 
 1. Pick an element from the right.
 2. Keep swapping it with the elements in the left till possible.
-3. Inner loop runs only till 1st index in order to compare b/w left and right element
+3. Outer loop : (n-1)
+4. Inner loop : runs only till 1st index in order to compare b/w left and right element
 
 ```   
 static void insertionSort(int[] ar) {
@@ -29,6 +30,10 @@ static void insertionSort(int[] ar) {
 ##### Time complexity :
 
 ``` O(n^2) ```
+
+##### Space complexity :
+
+``` O(1) : Constant```
 
 ### References:
 
