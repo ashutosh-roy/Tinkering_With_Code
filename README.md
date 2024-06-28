@@ -17,7 +17,6 @@ Random Necessary Tidbits
 * To reduce the size of number to fit the integer bit range, we use number % MOD where mod = (int) 1e9 + 7;
 * Integer.MAX_VALUE -> (2^31-1 = 2147483647)
 * Integer.MIN_VALUE -> (-2^31 = -2147483648)
-
 ___
 
 * Recursion
@@ -73,7 +72,7 @@ ___
     * XOR of numbers of given range
     * Divide two integers without using multiplication and division operators
 
-### Miscelleaneous
+### Miscellaneous
 
 ##### Java
 
