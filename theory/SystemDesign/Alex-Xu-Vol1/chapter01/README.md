@@ -60,17 +60,18 @@ MySQL: Used in many web applications for structured data storage, such as WordPr
   Join operations are generally not supported.
 
 > Key-Value Stores:
-  Redis: Redis is a popular open-source, in-memory data structure store used as a database, cache, and message broker.
+> Redis: Redis is a popular open-source, in-memory data structure store used as a database, cache, and message broker.
 
 > Graph Stores:
-Neo4j: Neo4j is a widely used graph database management system known for its native graph storage and processing.
+> Neo4j: Neo4j is a widely used graph database management system known for its native graph storage and processing.
 
 > Column Stores:
-Cassandra: Apache Cassandra is a distributed NoSQL database management system known for its robust support for handling large amounts of data across many commodity servers.
+> Cassandra: Apache Cassandra is a distributed NoSQL database management system known for its robust support for
+> handling
+> large amounts of data across many commodity servers.
 
 > Document Stores:
-MongoDB: MongoDB is a popular document-oriented NoSQL database program that uses JSON-like documents with schema.
-
+> MongoDB: MongoDB is a popular document-oriented NoSQL database program that uses JSON-like documents with schema.
 
 - Most popular NoSQL DBs - CouchDB, Neo4J, Cassandra, HBase, DynamoDB
 
@@ -111,7 +112,6 @@ scalability requirements, and the nature of queries expected. Relational databas
 querying, while non-relational databases offer flexibility and scalability for handling diverse data types and high
 volumes.
 
-
 # Step 3 :  Vertical scaling vs. horizontal scaling
 
 Vertical scaling == scale up. This means adding more power to your servers - CPU, RAM, etc.
@@ -146,7 +146,8 @@ Horizontal scaling == scale out. Add more servers to your pool of resources.
 
 In design so far, the server going down (ie due to failure or overload) means the whole application goes down with it.
 
-###### Result :- 
+###### Result :-
+
 By adding a load balancer, we successfully made our web tier more available and we also added possibility for fail over.
 
 A load balancer evenly distributes incoming traffic among web servers in a load-balanced set:
@@ -154,6 +155,7 @@ A load balancer evenly distributes incoming traffic among web servers in a load-
 ![load-balancer-example](images/load-balancer-example.png)
 
 How it works?
+
 * Clients connect to the `public IP of the load balancer`. Web servers are unreachable by clients directly.
   `Instead, they have private IPs, which the load balancer has access to.`
 * If server 1 goes down, all traffic will be routed to server 2. This prevents website from going offline. We'll also
@@ -201,11 +203,12 @@ Sweet, let's now improve the load/response time by adding a cache & shifting sta
 # Step 6:  Cache
 
 The cache tier is a temporary storage layer
+
 * It stores frequently accessed data or results of expensive computations.
 * from which results are fetched much more rapidly than from within a
-database.
-It can also be scaled independently of the database.
-![cache-tier](images/cache-tier.png)
+  database.
+  It can also be scaled independently of the database.
+  ![cache-tier](images/cache-tier.png)
 
 The example above is a read-through cache - server checks if data is available in the cache. If not, data is fetched
 from the database.
@@ -231,7 +234,6 @@ Whenever a user requests some static content, the CDN server closest to the user
 
 ![cdn](images/cdn.png)
 
-
 Here's the request flow:
 
 ![cdn-request-flow](images/cdn-request-flow.png)
@@ -249,9 +251,14 @@ Here's the request flow:
 * Cache expiry - consider appropriate cache expiry. Too short - frequent requests to origin. Too long - data becomes
   stale.
 * CDN fallback - clients should be able to workaround the CDN provider if there is a temporary outage on their end.
-* Invalidation - can be done via an API call or by passing object versions.
+* Invalidation -
+    - refers to the process of deleting data from CDN cache before expiry
+    - This is necessary when the content on the origin server is updated/changed. The CDN needs to share the current
+      version
+    - can be done via an API call or by passing object versions.
 
 Refined design of our web application:
+
 ![web-app-design-after-cdn](images/web-app-design-after-cdn.png)
 
 # Stateless web tier
@@ -264,6 +271,7 @@ NoSQL database.
 ## Stateful architecture
 
 Stateful servers remember client data across different requests. Stateless servers don't.
+
 ![stateful-servers](images/stateful-servers.png)
 
 In the above case, users are coupled to the server which stores their session data. If they make a request to another

@@ -19,7 +19,7 @@ Random Necessary Tidbits
 
 ___
 
-### [Recursion](theory/Recursion/Recurison.md)
+### [Recursion](theory/Recursion/Recursion.md)
 
 > TODO :Add generic algorithm style approach in recursion notes for all three patterns.
 
