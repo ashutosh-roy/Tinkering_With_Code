@@ -14,8 +14,27 @@
 
 ### Optimised Approach :
 
-* Use recursion
-* Always do a MOD of the products to reduce the large number of digits
+* What are the sub-problems here?
+
+* We have only two possibilities : either even (5^(n/2)) or odd possibilities (4^(n/2)).
+
+* We calculate even possibilities first and then the odd possibilities
+
+* Remember To : Always do a MOD of the products (at every step) to reduce the large number of digits
+
+```
+n = 5. 
+We calculate 
+even_power : 3
+odd_power : 2
+- even_possibility : pow (5, even_power)
+- odd_possibility  : pow (4, odd_power)
+
+pow(value, power)
+Base case : if(n==0) return 1;
+Recursive case : int temp = pow(value, power/2)
+
+```
 
 ``` 
   static int mod = (int) 1e9 + 7;
