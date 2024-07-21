@@ -11,25 +11,51 @@ a.k.a my learning journal.
 ### DSA
 
 Random Necessary Tidbits
+```
+In Java, things are strictly Pass By Value 
+(for objects, Pass BY VALUE occurs and it means that REFERENCE is passed as VALUE.)
 
+Pass By Reference :
+Scenario --- If teacher has given his original class notes doc to a student, 
+any changes he makes there will reflect in others who have the sheet.
+
+Pass By Value :
+Scenario --- If teacher has given his printout of Original class notes doc to a student, 
+any changes he makes there will reflect in others who have the sheet.
+
+
+Pass By Reference, happens in C with the help of pointers.
+
+```
 * Auxiliary space complexity : refers to the extra space or memory required by an algorithm apart from the input size.
 * To reduce the size of number to fit the integer bit range, we use number % MOD where mod = (int) 1e9 + 7;
-* Integer.MAX_VALUE -> (2^31-1 = 2147483647)
-* Integer.MIN_VALUE -> (-2^31 = -2147483648)
+```
+Integer.MAX_VALUE -> (2^31-1 = 2147483647)
+Integer.MIN_VALUE -> (-2^31 = -2147483648)
+```
+![img.png](img.png)
 
+* Combination Formula
+
+![img_2.png](img_2.png)
+
+* Permutation Formula
+
+![img_1.png](img_1.png)
 ___
 
-### [Recursion](theory/Recursion/Recursion.md)
+### Recursion
 
-> TODO :Add generic algorithm style approach in recursion notes for all three patterns.
-
+[Intro to Recursion](theory/Recursion/Recursion.md)
+##### Types :-
 > Divide and Conquer
 
 * [Count Good Numbers](theory/Recursion/CountGoodNumbers.md)
 
-> Backtracking
-
-* [Combination Sum 1](theory/Recursion/CombinationSum.md)
+> Backtracking   
+* Understand this pattern
+* [Combination Sum 1](theory/Recursion/CombinationSum.md) 
+* Subset Sum 1 
 
 > Generic Recursion
 
