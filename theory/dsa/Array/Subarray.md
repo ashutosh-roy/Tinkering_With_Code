@@ -11,7 +11,9 @@ E.g., For given array, [10, 20, 30, 40], prefix sum is [10, 30, 60, 100]
 
 ### : In Brief :
 
-##### Longest Subarray Scenarios covered :
+1. Frequency of Subarray with sum as K 
+
+2. Longest Subarray Scenarios covered :
 
 > Scenario 1 : Find longest subarray with sum 'K' for arrays with elements having +ve values and 0s
 
@@ -23,7 +25,7 @@ E.g., For given array, [10, 20, 30, 40], prefix sum is [10, 30, 60, 100]
 
 ____
 
-##### Maximum Sum of Subarray Scenarios covered :
+3. Maximum Sum of Subarray Scenarios covered :
 
 > Scenario 1 : For Maximum Sum K of Subarray,
 

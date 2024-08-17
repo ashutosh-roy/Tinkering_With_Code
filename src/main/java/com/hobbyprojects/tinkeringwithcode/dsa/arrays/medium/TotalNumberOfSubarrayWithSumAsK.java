@@ -4,13 +4,12 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.Map;
-
 @Slf4j
 public class TotalNumberOfSubarrayWithSumAsK {
     public static void main(String[] args) {
         int k = 10;
         int[] num = new int[]{2, 3, 5, 9, 1};
-        log.info("Max Subarray Length = %s".formatted(totalNumberOfSubarraysWithSumAsK(num, k)));
+        System.out.printf("Max Subarray Length = %s%n", totalNumberOfSubarraysWithSumAsK(num, k));
     }
 
     private static int totalNumberOfSubarraysWithSumAsK(int[] num, int k) {

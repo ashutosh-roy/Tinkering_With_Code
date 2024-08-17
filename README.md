@@ -6,7 +6,7 @@ a.k.a my learning journal.
 
 ### System Design
 
-[Scale from Zero to Million Users](theory/SystemDesign/Alex-Xu-Vol1/chapter01/README.md)
+[Scale from Zero to Million Users](theory/SystemDesign/HLD/Alex-Xu-Vol1/chapter01/README.md)
 
 ### DSA
 
@@ -46,21 +46,21 @@ ___
 
 ### Recursion
 
-[Intro to Recursion](theory/Recursion/Recursion.md)
+[Intro to Recursion](theory/dsa/Recursion/Recursion.md)
 ##### Types :-
 > Divide and Conquer
 
-* [Count Good Numbers](theory/Recursion/CountGoodNumbers.md)
+* [Count Good Numbers](theory/dsa/Recursion/CountGoodNumbers.md)
 
 > Backtracking   
 * Understand this pattern
-* [Combination Sum 1](theory/Recursion/CombinationSum.md) 
+* [Combination Sum 1](theory/dsa/Recursion/CombinationSum.md) 
 * Subset Sum 1 
 
 > Generic Recursion
 
 * [String to Integer (atoi)]()
-* [Pow(x, n)](theory/Recursion/pow_x_n.md)
+* [Pow(x, n)](theory/dsa/Recursion/pow_x_n.md)
 * [Generate All Binary Strings except consecutive ones](https://www.geeksforgeeks.org/generate-binary-strings-without-consecutive-1s/?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=generate-binary-strings-without-consecutive-1s)
 
 ___
@@ -69,26 +69,26 @@ ___
 
 > Famous Problems / One-Ofs
 
-* [Sort Arrays of 0s, 1s and 2s](theory/Array/Sort_Arrays_Of_0s_1s_2s_(Dutch_National_Flag_Algorithm).md)
+* [Sort Arrays of 0s, 1s and 2s](theory/dsa/Array/Sort_Arrays_Of_0s_1s_2s_(Dutch_National_Flag_Algorithm).md)
 * [Stock Buy and Sell](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/medium/StockBuyAndSell.java)
-* [Next Permutation](theory/Array/NextPermutation.md)
-* [Pascal's Traingle](/theory/Array/Pascal'sTriangle.md)
+* [Next Permutation](theory/dsa/Array/NextPermutation.md)
+* [Pascal's Traingle](/theory/dsa/Array/Pascal'sTriangle.md)
 * Count reverse pairs
 * Count inversions
 * Find the Union
 
 > Longest Subarray / Maximum Subarray
 
-* [Longest subarray with given sum K(positives)](theory/Array/Subarray.md)
-* [Longest subarray with sum K (Positives + Negatives)](theory/Array/Subarray.md)
+* [Longest subarray with given sum K(positives)](theory/dsa/Array/Subarray.md)
+* [Longest subarray with sum K (Positives + Negatives)](theory/dsa/Array/Subarray.md)
 * [Longest Consecutive Sequence In An Array](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/medium/LongestConsecutiveSequence.java)
-* [Find maximum sum for subarray](theory/Array/Subarray.md)
+* [Find maximum sum for subarray](theory/dsa/Array/Subarray.md)
 
 > Matrix Related
 
-* [Set Matrix Zeroes](theory/Array/Matrix.md)
-* [Spiral Traversal Of Matrix](theory/Array/Matrix.md)
-* [Rotate Image by 90 degrees](theory/Array/Matrix.md)
+* [Set Matrix Zeroes](theory/dsa/Array/Matrix.md)
+* [Spiral Traversal Of Matrix](theory/dsa/Array/Matrix.md)
+* [Rotate Image by 90 degrees](theory/dsa/Array/Matrix.md)
 
 > Sorting
 
@@ -96,7 +96,7 @@ ___
 * Check if the array is sorted
 * Check if array is sorted and rotated
 * Remove duplicates from Sorted array (in-place)
-* [Second-Largest Element in an Array without sorting](theory/Array/SecondLargestAndSmallestElementWithoutSorting.md)
+* [Second-Largest Element in an Array without sorting](theory/dsa/Array/SecondLargestAndSmallestElementWithoutSorting.md)
 
 > Array Rotation
 
@@ -106,7 +106,7 @@ ___
 > Rearranging Elements
 
 * Move Zeros to end
-* [Rearrange elements by sign](theory/Array/RearrangeElementsBySign.md)
+* [Rearrange elements by sign](theory/dsa/Array/RearrangeElementsBySign.md)
 
 > Searching / Finding certain elements or patterns
 
@@ -121,11 +121,11 @@ ___
 
 ### Sorting
 
-* [Selection Sort](/theory/Sorting/SelectionSort.md)
-* [Bubble Sort](/theory/Sorting/BubbleSort.md)
-* [Insertion Sort](/theory/Sorting/InsertionSort.md)
-* [Merge Sort](theory/Sorting/MergeSort.md)
-* [Quick Sort](theory/Sorting/QuickSort.md)
+* [Selection Sort](/theory/dsa/Sorting/SelectionSort.md)
+* [Bubble Sort](/theory/dsa/Sorting/BubbleSort.md)
+* [Insertion Sort](/theory/dsa/Sorting/InsertionSort.md)
+* [Merge Sort](theory/dsa/Sorting/MergeSort.md)
+* [Quick Sort](theory/dsa/Sorting/QuickSort.md)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 ##### Java
 
 * Java 8 Features
-    * [Streams](/theory/FunctionalProgramming/Streams.md) (In-progress)
+    * [Streams](/theory/dsa/FunctionalProgramming/Streams.md) (In-progress)
       Progress)
     * Optional (TODO)
 
