@@ -140,7 +140,6 @@ class Solution {
 }
 ```
 
-CROSS check TC with Striver
 ``` 
  Time complexity :
  - O(2 * (m * n)) - where m is row_size and n is column_size
