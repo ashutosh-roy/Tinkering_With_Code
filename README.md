@@ -4,13 +4,19 @@ a.k.a my learning journal.
 
 ## Table of Contents
 
-### System Design
+## System Design
 
+---
 [Scale from Zero to Million Users](theory/SystemDesign/HLD/Alex-Xu-Vol1/chapter01/README.md)
 
-### DSA
+## DSA
+____
 
-Random Necessary Tidbits
+##### Significance of constraints
+[Notes Link](theory/dsa/SignificanceInConstraints.md)
+
+##### Random Necessary Tidbits
+
 ```
 In Java, things are strictly Pass By Value 
 (for objects, Pass BY VALUE occurs and it means that REFERENCE is passed as VALUE.)
@@ -42,6 +48,8 @@ Integer.MIN_VALUE -> (-2^31 = -2147483648)
 * Permutation Formula
 
 ![img_1.png](img_1.png)
+
+
 ___
 
 ### Recursion
