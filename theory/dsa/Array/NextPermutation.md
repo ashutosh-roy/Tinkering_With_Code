@@ -10,10 +10,10 @@ Lexicographically means in the dictionary order. For e.g., let's try to write [4
 [6,5,4]
 ```
 ##### Psuedocode
-Step1 : Find the breakpoint after which there are increasing elements. Break out of the loop once you get the value!
-Step2 : If there's no breakpoint found then reverse the entire array (In this case :- [3,2,1] no increasing elements so directly jump to step4 - [1,2,3])
-Step3 : Swap the element at the breakpoint with the next element. Break out of the loop once you get the value!
-Step4 : Reverse the right part of the array  
+1) Find the breakpoint after which there are increasing elements. Break out of the loop once you get the value!
+2) : If there's no breakpoint found then reverse the entire array (In this case :- [3,2,1] no increasing elements so directly jump to step4 - [1,2,3])
+3) : Swap the element at the breakpoint with the next element. Break out of the loop once you get the value!
+4) : Reverse the right part of the array  
 
 Example :
 1) Input Array :- [1,2,3]
