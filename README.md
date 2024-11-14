@@ -39,17 +39,24 @@ Pass By Reference, happens in C with the help of pointers.
 Integer.MAX_VALUE -> (2^31-1 = 2147483647)
 Integer.MIN_VALUE -> (-2^31 = -2147483648)
 ```
-![img.png](img.png)
+![img.png](theory/dsa/images/PrimitiveDataTypesAndSizes.png)
 
 * Combination Formula
 
-![img_2.png](img_2.png)
+![img_2.png](theory/dsa/images/Combination.png)
+
+n = total number of items
+
+r = items chosen at a time  
+
 
 * Permutation Formula
 
-![img_1.png](img_1.png)
+![img_1.png](theory/dsa/images/Permutation.png)
 
+n = total number of items
 
+r = items chosen at a time
 ___
 
 ### Recursion

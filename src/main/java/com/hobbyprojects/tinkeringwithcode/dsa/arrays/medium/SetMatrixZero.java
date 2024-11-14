@@ -1,4 +1,4 @@
-package com.hobbyprojects.tinkeringwithcode.dsa;
+package com.hobbyprojects.tinkeringwithcode.dsa.arrays.medium;
 
 import java.util.Scanner;
 
