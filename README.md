@@ -81,6 +81,12 @@ ___
 ___
 
 ### Arrays
+> Easy Wins 
+* [Remove Duplicates From Sorted Array](theory/dsa/Array/RemoveDuplicatesFromSortedArray.md)
+* [Remove-elements](https://leetcode.com/problems/remove-element/description/)
+* [Palindrome-With-And-Without-Converting-To-String](src/main/java/com/hobbyprojects/tinkeringwithcode/dsa/arrays/easy/PalindromeWithAndWithoutString.java)
+* [Search-insert-position](theory/dsa/Array/SearchInsertPosition.md)
+* 
 
 > Famous Problems / One-Ofs
 
