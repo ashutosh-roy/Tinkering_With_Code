@@ -8,24 +8,26 @@ Binary Search
 ##### Source Code
 
 ```
- public int searchInsert(int[] nums, int target) {
-    int mid = 0, start = 0, end = nums.length; 
-    int indexFound = 1;
-    while(start < end) 
-    {
-        mid  = start + (end-start)/2;
-        if(target==nums[mid]) {
-            return mid;
+ class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int mid = 0, start = 0, end = nums.length - 1; 
+        int indexFound = 1;
+        while(start <= end) 
+        {
+            mid  = start + (end-start)/2;
+            if(target==nums[mid]) {
+                return mid;
+            }
+            if(target > nums[mid]) {
+                start = mid + 1;
+            }
+            if(target < nums[mid]) {
+                end = mid - 1;
+            }
+     
         }
-        if(target > nums[mid]) {
-            start = mid + 1;
-        }
-        if(target < nums[mid]) {
-            end = mid - 1;
-        }
- 
+        return start;
     }
-    return start;
 }
 ```
 
