@@ -175,8 +175,12 @@ ___
 
 ### Miscellaneous
 
-##### Java
+##### Resume
+* [v2](resumes/Ashutosh Roy.pdf)
+* [v1](resumes/Self Resume v1.pdf)
 
+##### Java
+* [Core Java Questions](theory/java/corejava/GFG___200Plus___Questions__Understood___And__Added__In__OwnWords.md)
 * Java 8 Features
     * [Streams](/theory/dsa/FunctionalProgramming/Streams.md) (In-progress)
       Progress)
