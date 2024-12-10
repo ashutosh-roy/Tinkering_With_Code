@@ -4,12 +4,21 @@ a.k.a my learning journal.
 
 ## Table of Contents
 
-## System Design
+### System Design
 ____
-
+##### HLD
 [Scale from Zero to Million Users](theory/SystemDesign/HLD/Alex-Xu-Vol1/chapter01/README.md)
 
-## DSA
+##### LLD 
+* [SOLID Principles](theory/SystemDesign/LLD/SOLID.md)
+* [is-a vs has-a relationship](theory/SystemDesign/LLD/is-a-VS-has-a-relationship.md)
+* [Why do we need design patterns](theory/SystemDesign/LLD/Why_do_we_need_design_patterns.md)
+* [Strategy Design Pattern](theory/SystemDesign/LLD/Strategy.md) 
+* [Observer Design Pattern]() 
+* [Decorator Design Pattern]() 
+* [Factory Design Pattern]() 
+
+### DSA
 ____
 
 ##### Significance of constraints
@@ -173,20 +182,11 @@ ___
     * XOR of numbers of given range
     * Divide two integers without using multiplication and division operators
 
-### Miscellaneous
+#### Miscellaneous
 
 ##### Resume
 * [v2](resumes/Ashutosh Roy.pdf)
 * [v1](resumes/Self Resume v1.pdf)
-
-##### Java
-* [Core Java Questions](theory/java/corejava/GFG___200Plus___Questions__Understood___And__Added__In__OwnWords.md)
-* Java 8 Features
-    * [Streams](/theory/dsa/FunctionalProgramming/Streams.md) (In-progress)
-      Progress)
-    * Optional (TODO)
-
-* Design Patterns (TODO)
 
 ##### Templates
 
