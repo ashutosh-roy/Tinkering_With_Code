@@ -9,9 +9,13 @@ ____
 ##### HLD
 [Scale from Zero to Million Users](theory/SystemDesign/HLD/Alex-Xu-Vol1/chapter01/README.md)
 
+##### Resume 
+[Point Wise Explanation](theory/resume/resume__explanation.md)
+
 ##### LLD 
 * [SOLID Principles](theory/SystemDesign/LLD/SOLID.md)
 * [is-a vs has-a relationship](theory/SystemDesign/LLD/is-a-VS-has-a-relationship.md)
+* [Composition vs Aggregation](theory/SystemDesign/LLD/Composition_vs_Aggregation.md)
 * [Why do we need design patterns](theory/SystemDesign/LLD/Why_do_we_need_design_patterns.md)
 * [Strategy Design Pattern](theory/SystemDesign/LLD/Strategy.md) 
 * [Observer Design Pattern]() 
