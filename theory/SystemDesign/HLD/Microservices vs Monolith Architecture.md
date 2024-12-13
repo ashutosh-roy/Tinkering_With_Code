@@ -5,7 +5,6 @@
 | **Definition**        | Independent, small services.       | Unified codebase.                      |
 | **Scalability**       | Scales horizontally per service.   | Scales vertically as a whole.          |
 | **Deployment**        | Independent service deployment.    | Entire app redeployed for changes.     |
-| **Development Speed** | Parallel development possible.     | Slower due to shared codebase.         |
 | **Resilience**        | Isolated failures.                 | Single failure affects the entire app. |
 | **Cost**              | Higher infra and management costs. | Lower infra costs.                     |
 | **Use Case Fit**      | Large, evolving systems.           | Small, well-defined systems.           |
