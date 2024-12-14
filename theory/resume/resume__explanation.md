@@ -252,6 +252,8 @@ Metrics were generated and emitted to Prometheus and read using Grafana dashboar
 Ensured adherence to 99.9% SLA for data availability during business hours, reduced retrieval times via resilient Data-Sync APIs developed in SpringBoot to consolidate scattered loan and EMI data for over 1M+ customers from Pennant and Snowflake into MongoDB.
 ```
 
+1. What approach did you take to ensure 99.9% SLA for data availability?
+Monitoring : We have setup alerts and dashboards to monitor API Success and failures, server restarts 
 
 
 ### Point 5
@@ -314,8 +316,8 @@ Reduced GCP Compute engine provisioning time by 80%, enabling faster deployments
 ```
 
 **What is terraform ?**
-[[Terraform Basics]]
+[Terraform Basics](theory/resume/Terraform Basics.md)
 
 
 ### Kafka Basics related jargons 
-[[Kafka Basics]]
+[Kafka Basics - Jargon Definitions](/theory/resume/Kafka Basics - Jargon Definitions.md)
