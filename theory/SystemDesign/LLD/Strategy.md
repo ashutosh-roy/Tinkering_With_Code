@@ -28,7 +28,11 @@ In the above diagram, there are 3 vehicle (child classes) inheriting from the pa
 
 #### **Why do we need a design pattern here?**
 On observing closely, we find that there's a lot of repeated code between _Sporty vehicle_ and _Offroad vehicle_.
-Hence we use strategy pattern here. 
+Hence we use strategy pattern here.
 
+#### Pros of Strategy! 
+* You can swap algorithms used inside an object at runtime.
+* You can isolate the implementation details of an algorithm from the code that uses it.
+* Open/Closed Principle. You can introduce new strategies without having to change the context.
 _____
 
