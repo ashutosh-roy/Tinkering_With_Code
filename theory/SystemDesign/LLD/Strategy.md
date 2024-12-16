@@ -1,4 +1,8 @@
 ## Strategy Design Pattern 
+
+> Type of Behavioral Design Pattern
+
+
 ![img_1.png](img_1.png)
 
 #### **Vehicle Class : Responsibilities**
