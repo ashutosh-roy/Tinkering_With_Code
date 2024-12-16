@@ -172,6 +172,30 @@ ___
 * Container with most water (two pointer / greedy)
 
 ___
+### Greedy 
+##### Fractional Knapsack 
+
+___
+### Dynamic Programming 
+
+##### 0-1 Knapsack 	
+* Subset Sum
+* Equal Sum Partition
+* Count of Subset Sum
+* Minimum Subset Sum Diff.
+* Target Sum
+
+##### Unbounded Knapsack
+##### Fibonacci
+##### LCS
+##### LIS
+##### Kadene's Algo 	
+##### Matrix Chain Multiplication
+##### DP on Trees
+##### DP on Grid
+##### Others
+
+___
 
 ### Bit Manipulation -- Low Priority
 
