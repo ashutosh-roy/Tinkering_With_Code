@@ -2,6 +2,8 @@
 
 This document provides an analysis of the time and space complexity of the 0-1 Knapsack problem, considering different approaches.
 
+[Solve the problem here](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
+
 ## **Approaches**
 
 ### **1. Recursive Solution (Without Memoization)**
