@@ -17,7 +17,7 @@ ____
 * [is-a vs has-a relationship](theory/SystemDesign/LLD/is-a-VS-has-a-relationship.md)
 * [Composition vs Aggregation](theory/SystemDesign/LLD/Composition_vs_Aggregation.md)
 * [Why do we need design patterns](theory/SystemDesign/LLD/Why_do_we_need_design_patterns.md)
-* [Strategy Design Pattern](theory/SystemDesign/LLD/Strategy.md) 
+* [Strategy Design Pattern](theory/SystemDesign/LLD/designPatterns/Strategy.md) 
 * [Observer Design Pattern]() 
 * [Decorator Design Pattern]() 
 * [Factory Design Pattern]() 
