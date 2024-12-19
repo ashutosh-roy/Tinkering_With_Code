@@ -179,10 +179,10 @@ ___
 ### Dynamic Programming 
 
 ##### 0-1 Knapsack 	
-* Subset Sum
-* Equal Sum Partition
-* Count of Subset Sum
-* Minimum Subset Sum Diff.
+* [Subset Sum](theory/dsa/Dynamic Programming/SubSetSum.md)
+* [Equal Sum Partition](theory/dsa/Dynamic Programming/EqualSumPartitionProblem.md)
+* [Count of Subset Sum](theory/dsa/Dynamic Programming/CountNumberOfSubsets.md)
+* [Minimum Subset Sum Diff.](theory/dsa/Dynamic Programming/Minimum_Difference_Partition.md)
 * Target Sum
 
 ##### Unbounded Knapsack
