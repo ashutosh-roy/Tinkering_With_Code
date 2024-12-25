@@ -5,7 +5,7 @@ import com.hobbyprojects.tinkeringwithcode.designPatterns.strategy.with.seatingS
 
 public class SportsCar extends Vehicle {
 
-    SportsCar() {
-        super(new VTwelveDrivingStrategy(), new CoupeStrategy());
-    }
+  SportsCar() {
+    super(new VTwelveDrivingStrategy(), new CoupeStrategy());
+  }
 }

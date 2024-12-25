@@ -3,40 +3,40 @@ package com.hobbyprojects.tinkeringwithcode.dsa.recursion.medium;
 import java.util.Scanner;
 
 public class pow {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the power to raise to :-");
-        double x = sc.nextDouble();
-        System.out.println("Enter the power to raise to :-");
-        int n = sc.nextInt();
-        System.out.println(" Raise to power :-" + myPow(x, n));
+    System.out.println("Enter the power to raise to :-");
+    double x = sc.nextDouble();
+    System.out.println("Enter the power to raise to :-");
+    int n = sc.nextInt();
+    System.out.println(" Raise to power :-" + myPow(x, n));
+  }
 
+  public static double myPow(double x, int n) {
+
+    // Base condition: If n is 0, x^0 is 1
+    if (n == 0) {
+      return 1;
     }
-    public static double myPow(double x, int n) {
 
-        // Base condition: If n is 0, x^0 is 1
-        if (n == 0) {
-            return 1;
-        }
+    // Convert n to a long integer to handle the edge case with Integer.MIN_VALUE
+    long N = n;
 
-        // Convert n to a long integer to handle the edge case with Integer.MIN_VALUE
-        long N = n;
-
-        // If n is negative, take the reciprocal of x and make N positive
-        if (N < 0) {
-            N = -N;
-            x = 1 / x;
-        }
-
-        // If N is even, recursively compute the square of x^(N/2)
-        if (N % 2 == 0) {
-            return myPow(x * x, (int) (N / 2));
-        }
-
-        // If N is odd, recursively compute x^(N-1) and multiply it by x
-        else {
-            return x * myPow(x, (int) (N - 1));
-        }
+    // If n is negative, take the reciprocal of x and make N positive
+    if (N < 0) {
+      N = -N;
+      x = 1 / x;
     }
+
+    // If N is even, recursively compute the square of x^(N/2)
+    if (N % 2 == 0) {
+      return myPow(x * x, (int) (N / 2));
+    }
+
+    // If N is odd, recursively compute x^(N-1) and multiply it by x
+    else {
+      return x * myPow(x, (int) (N - 1));
+    }
+  }
 }

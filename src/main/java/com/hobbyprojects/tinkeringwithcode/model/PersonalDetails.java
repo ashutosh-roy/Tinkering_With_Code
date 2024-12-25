@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 @Builder
 public class PersonalDetails {
-    String name;
-    int age;
-    boolean hasDrivingLicense;
+  String name;
+  int age;
+  boolean hasDrivingLicense;
 }

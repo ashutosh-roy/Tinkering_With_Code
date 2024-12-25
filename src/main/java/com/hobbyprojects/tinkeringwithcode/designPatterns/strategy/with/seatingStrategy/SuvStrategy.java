@@ -2,8 +2,8 @@ package com.hobbyprojects.tinkeringwithcode.designPatterns.strategy.with.seating
 
 public class SuvStrategy implements SeatingStrategy {
 
-    @Override
-    public void displayNumberOfSeats() {
-        System.out.println("7 seater Car");
-    }
+  @Override
+  public void displayNumberOfSeats() {
+    System.out.println("7 seater Car");
+  }
 }

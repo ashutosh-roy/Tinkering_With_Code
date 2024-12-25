@@ -1,4 +1,7 @@
-
+## HLD
+[[Authentication and Authorization]]
+## LLD
+[[Composition_vs_Aggregation]]
 ### Piramal Related Grilling (Java, SpringBoot)
 
 ### Point 1 

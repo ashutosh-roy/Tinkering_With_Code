@@ -5,7 +5,7 @@ import com.hobbyprojects.tinkeringwithcode.designPatterns.strategy.with.seatingS
 
 public class OffroadVehicle extends Vehicle {
 
-    OffroadVehicle() {
-        super(new FourByFourDrivingStrategy(), new SuvStrategy());
-    }
+  OffroadVehicle() {
+    super(new FourByFourDrivingStrategy(), new SuvStrategy());
+  }
 }
