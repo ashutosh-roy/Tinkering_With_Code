@@ -36,6 +36,8 @@ public class Main {
 
 The **has-a** relationship in Java represents a "uses" or "owns" relationship between classes. This is also known as **Composition** or **Aggregation** in object-oriented programming. It allows one class to contain a reference to another class as a field, indicating that one object "has-a" instance of another object.
 
+### [[Composition_vs_Aggregation]]
+
 ---
 
 ### **Implementation**
