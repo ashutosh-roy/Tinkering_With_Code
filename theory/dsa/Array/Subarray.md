@@ -262,36 +262,22 @@ ____
 ##### Source Code
 
 ```
+  class Solution {
     public int maxAbsoluteSum(int[] nums) {
-        int i,j, sum=0;
-        int max =Integer.MIN_VALUE;
-        int min =Integer.MAX_VALUE;
+        int max = 0, min = 0,currentMin = 0, currentMax = 0;
         int n = nums.length;
-        // Find maximum element using Kadene's algo 
-        for(i=0;i<n;i++)
-        {
-            sum+=nums[i];
-            min = Math.min(min, sum);
-            if(sum>0)
-            {
-                sum = 0;
-            }
+        for(int i=0;i<n;i++) {
+            currentMax = Math.max(currentMax + nums[i], nums[i]);
+            currentMin = Math.min(currentMin + nums[i], nums[i]);
+            
+            max = Math.max(currentMax, max);
+            min = Math.min(currentMin, min);
         }
-        sum = 0;
-        // Find minimum element using Kadene's algo 
-        for(i=0;i<n;i++)
-        {
-            sum+=nums[i];
-            max = Math.max(max, sum);
-            if(sum<0)
-            {
-                sum = 0;
-            }
-        }
-        // Find absolute values of max and min
-        // Find MAX of the above two values
-        return Math.max(Math.abs(max),Math.abs(min));
+
+        // Since absolute sum can be given by either largest subarray sum or minimum subarray sum, we can calculate both and find the MAX
+        return Math.max(Math.abs(max), Math.abs(min));
     }
+}
 ```
 
 ``` 
