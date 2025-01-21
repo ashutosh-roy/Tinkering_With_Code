@@ -1,3 +1,52 @@
+#### Optimized Force method which uses Binary Search once
+```java
+public boolean searchMatrix(int[][] matrix, int target) {
+    // Get the dimensions of the matrix: number of rows and columns
+    int rows = matrix.length, cols = matrix[0].length;
+
+    // Treat the matrix as a flattened 1D array with indices from 0 to (rows * cols) - 1
+    int left = 0, right = (rows * cols) - 1;
+
+    // Perform binary search on the virtual 1D array
+    while (left <= right) {
+        // Calculate the middle index to prevent overflow
+        int mid = left + (right - left) / 2;
+
+        // Map the 1D index to 2D matrix coordinates
+        int row = mid / cols; // Determine the row
+        int col = mid % cols; // Determine the column
+
+        // Check if the target is found
+        if (matrix[row][col] == target) {
+            return true;
+        }
+        // If the current element is greater than the target, search the left half
+        else if (matrix[row][col] > target) {
+            right = mid - 1;
+        }
+        // If the current element is less than the target, search the right half
+        else {
+            left = mid + 1;
+        }
+    }
+
+    // If we exit the loop without finding the target, return false
+    return false;
+}
+
+/**
+ * Time Complexity:
+ * - O(log (m * n)), where m is the number of rows and n is the number of columns.
+ *   - Binary search runs on the flattened matrix treated as a 1D array.
+ *
+ * Space Complexity:
+ * - O(1), as no additional space is used apart from variables.
+ */
+
+
+```
+
+#### Brute Force method which uses Binary Search twice 
 ```java
 class Solution {
     /**
