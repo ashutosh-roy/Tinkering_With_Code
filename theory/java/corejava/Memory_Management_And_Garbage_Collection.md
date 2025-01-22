@@ -146,14 +146,20 @@ The object is garbage collected only if JVM is running low on memory.
 ---
 
 ##### Heap Memory Structure
+
+Topics to cover
 Young Generation
-Eden
-Survivor (S0 and S1)
+  * Eden
+  * Survivor (S0 and S1)
 Old Generation
-Metaspace
-How Garbage Collector work & clean up the Heap memory with Example
-Types of Garbage Collector
-Single GC
-Parallel GC
-CMS (Concurrent Mark and Sweep)
-G1 GC
+ * Metaspace
+
+ * How Garbage Collector work & clean up the Heap memory with Example
+
+
+* Types of Garbage Collector
+   * Single GC
+   * Parallel GC
+
+* CMS (Concurrent Mark and Sweep)
+* G1 GC
