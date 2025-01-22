@@ -1,7 +1,7 @@
 [Created Using Shreyansh + ChatGPT](https://www.youtube.com/watch?v=vz6vSZRuS2M&list=PL6W8uoQQ2c63f469AyV78np0rbxRFppkx&index=10)
 
 #### 2 Types of Memory 
-![img_2.png](JVM__Stack__Content.png)
+![JVM__Stack__Content.png](JVM__Stack__Content.png)
 * Heap
   * 
 
@@ -35,7 +35,7 @@ public class Emp_detail {
 }
 ```
 
-![img_3.png](Stack And Heap Memory Reference example.png)
+![Stack And Heap Memory Reference example.png](Stack And Heap Memory Reference example.png)
 
 __________
 #### Types of References
