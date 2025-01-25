@@ -13,7 +13,7 @@ Automated EMI-Receipt posting, reducing turn around time (TAT) by 60% (from 5 ho
 Since Piramal is an NBFC (non-banking-financial-corporation), it has service Providers which lend to the customers using their platform. Now, operations user has to generate the reports on 25th of every month which is posted their LMS. The LMS takes care of posting the receipts to Service Provider.
 
 ##### **Business Challenge :** 
-1) Earlier Ops Users relied on X system and that was slow, unreliable and time consuming. 
+1) Earlier Ops Users relied on X system to aggregate the data from different places (for example customer related info from one, their nach mandate info from other place) and that was slow, unreliable and time consuming. 
 2) So they used to download reports from multiple sources and then collate and create an Nach Status file which is posted to LMS.
 3) This is shared to lending partners like Paytm and KreditBee and help for EMI Collection.
 
@@ -27,8 +27,11 @@ On successful adoption, we'll get back to the Ops Users and gather requirements 
 
 ##### **High-Level Architecture :**
 Two parts to this problem : 
-* Pulling the data from the different sources to collate and organize it at a single place
-	* [ ] We created data sync API 
+* We had LMS as a Source of Truth to pull details required for generating NACH receipts. We changed this source of truth to Snowflake.
+* Why did we not use ETL Pipeline for the same use case? 
+	* [ ] We created data sync API that extracts the data from Snowflake and transforms and loads it into the MongoDB 
+    * [ ] Using licensed tools would lead us into high costs and vendor-lock-in.
+    * [ ] Using free open source tools would also have some learning curve to it for the devs 
 * Help the user download this data into a debit sheet format 
 	- [ ] So basically we made a Java Spring Boot based file processing microservice to 
 		- [ ] handle file downloads (by reading the content from DB)
@@ -37,7 +40,7 @@ Two parts to this problem :
 
 >Difference between monolith and microservice ? 
 
-[[Microservices vs Monolith Architecture]]
+[Microservices vs Monolith Architecture](/theory/SystemDesign/HLD/Microservices_vs_Monolith_Architecture.md)
 
 >Why choice of language is Java and Spring Boot in a microservice environment ? 
 ```
@@ -129,7 +132,6 @@ Sparse index
 ```
 
 ---
-
 5. Error Handling and Reporting
 
 Impact: Poor error reporting leads to debugging delays and reduced visibility into system issues.
