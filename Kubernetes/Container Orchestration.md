@@ -1,0 +1,3 @@
+So we learned about containers and we now have our application packaged into a docker container. But what next? How do you run it in production? What if your application relies on other containers such as **database or messaging services** or other **backend services**? What if the number of users increase and you need to scale your application? You would also like to **scale down when the load decreases**. 
+
+The platform needs to orchestrate **the connectivity between the containers and automatically scale up or down based on the load**. This whole process of automatically deploying and managing containers is known as Container Orchestration.
