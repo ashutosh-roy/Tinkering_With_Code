@@ -1,0 +1,354 @@
+{
+  "main": {
+    "id": "45fa37977d7af37b",
+    "type": "split",
+    "children": [
+      {
+        "id": "43622d24d702b390",
+        "type": "tabs",
+        "dimension": 41.32867132867133,
+        "children": [
+          {
+            "id": "f13fd96bb969ec58",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/Revision/CKAD - Questions for revision.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "CKAD - Questions for revision"
+            }
+          },
+          {
+            "id": "ab0b1992f1b77d39",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lightning LAB 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Lightning LAB 1"
+            }
+          },
+          {
+            "id": "c852dbc8a4fe2fee",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/Revision/CKAD mock exam 2 - KodeKloud.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "CKAD mock exam 2 - KodeKloud"
+            }
+          }
+        ]
+      },
+      {
+        "id": "453209e5526efb17",
+        "type": "tabs",
+        "dimension": 58.67132867132867,
+        "children": [
+          {
+            "id": "ad240eff6047c433",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/STUDY PLAN/June - 1 Week - Holiday.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "June - 1 Week - Holiday"
+            }
+          },
+          {
+            "id": "23fd680a4f2ec391",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/Revision/CKAD mock exam 2 - KodeKloud.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "CKAD mock exam 2 - KodeKloud"
+            }
+          },
+          {
+            "id": "1e2cdb097b3acd3b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lightning LAB 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lightning LAB 1"
+            }
+          },
+          {
+            "id": "6e6ded2e36ea1c65",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lightning LAB 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Lightning LAB 2"
+            }
+          },
+          {
+            "id": "8effe450ff523c60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/Handy Commands - VIM.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Handy Commands - VIM"
+            }
+          },
+          {
+            "id": "f2120e209bbcb487",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/Kubernetes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kubernetes"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2733a82a6c5462e5",
+    "type": "split",
+    "children": [
+      {
+        "id": "65a95c66f9aa7bd5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1cde3387ce43224f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0afdbcdc9bd9e427",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "dry-run",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ac6675774140be94",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300.5062484741211,
+    "collapsed": true
+  },
+  "right": {
+    "id": "f279a9b5040dccbd",
+    "type": "split",
+    "children": [
+      {
+        "id": "870677f4171e8896",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "533fb4149fbff3aa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kubernetes/Pods.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Pods"
+            }
+          },
+          {
+            "id": "6fce1c40880af832",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kubernetes/Pods.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Pods"
+            }
+          },
+          {
+            "id": "6e69e52253b8b871",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "aeefa5589670602d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kubernetes/Pods.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Pods"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ad240eff6047c433",
+  "lastOpenFiles": [
+    "Kubernetes/Revision/CKAD mock exam 2 - KodeKloud.md",
+    "Kubernetes/Revision/CKAD - Questions for revision.md",
+    "Kubernetes/Revision/CKAD mock exam 1 - KodeKloud.md",
+    "Kubernetes/STUDY PLAN/June - 1 Week - Holiday.md",
+    "Lightning LAB 2.md",
+    "Lightning LAB 1.md",
+    "Kubernetes/Handy Commands - VIM.md",
+    "Kubernetes/Kubernetes.md",
+    "CKAD EXAM Trivia.md",
+    "Reddit - CKAD - Questions.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/5-services-and-networking/b. services.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/5-services-and-networking/a. network-policies.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/4-app-config-and-security/h. security.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/4-app-config-and-security/f. service-accounts.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/4-app-config-and-security/e. secrets.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/4-app-config-and-security/d. configmaps.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/4-app-config-and-security/c. request-limits-quotas.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/4-app-config-and-security/b. auth-and-admission-control.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/4-app-config-and-security/a. crd.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/3-app-observability-and-maintenance/b. probes-and-health-checks.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/3-app-observability-and-maintenance/a. api-deprecations.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/2-app-deployment/b. helm.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/2-app-deployment/a. deployment-strategies.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/1-app-design-and-build/d. labels-and-annotations.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/1-app-design-and-build/c. volumes.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/1-app-design-and-build/a. docker.md",
+    "Kubernetes/Revision/CKAD-Exercises-v3/LICENSE",
+    "Kubernetes/Revision/CKAD-Exercises-v3/5-services-and-networking",
+    "Kubernetes/Revision/CKAD-Exercises-v3/4-app-config-and-security",
+    "Kubernetes/Revision/CKAD-Exercises-v3/3-app-observability-and-maintenance",
+    "Kubernetes/Revision/CKAD-Exercises-v3/2-app-deployment",
+    "Kubernetes/Revision/CKAD-Exercises-v3/1-app-design-and-build",
+    "Kubernetes/Revision/CKAD-Exercises-v3",
+    "Kubernetes/Revision/CKAD-Exercises/LICENSE",
+    "Kubernetes/Revision/CKAD-Exercises/5-services-and-networking",
+    "Kubernetes/Revision/CKAD-Exercises/4-app-config-and-security",
+    "Pasted image 20250703162716.png",
+    "Pasted image 20250702213856.png",
+    "Pasted image 20250702213814.png",
+    "Pasted image 20250702213749.png",
+    "Pasted image 20250702213745.png",
+    "Pasted image 20250702192023.png",
+    "Pasted image 20250702185500.png",
+    "Pasted image 20250702185230.png",
+    "Pasted image 20250702184013.png",
+    "Pasted image 20250702081654.png"
+  ]
+}

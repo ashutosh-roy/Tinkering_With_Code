@@ -1,39 +1,93 @@
-With `TECK30`, I got a discount of 30% and it costed me around 311$ (~26,810)
-
-This EXAM link will be valid for 12 months! 
-& the certification will be valid for 2 YEARs!
-
-###### Browser Pre-requisites
-If you experience any kind of issues please make sure all points here are complied with:
-
-- **Browser**: only latest Chrome and latest Firefox are supported
-- **Extensions**: disable ALL extensions/plugins and run in private mode
-- **VPN/Proxy**: don't use a VPN/Proxy
-- **Internet**: use a stable internet connection, with low usage by others
-- **Tips**: Make sure to read the [**Tips**](https://killer.sh/attendee/506ef10e-94d2-436b-aad4-c13f486dfdf4/tips)
-
-https://github.com/cncf/curriculum/blob/master/CKAD_Curriculum_v1.32.pdf
-
-##### End Goal 
-###### final LEG
-Give Killer.sh DEMO sessions 
-###### base building
+[[CKAD EXAM Trivia]]
+[[Kubernetes]]
+###### Revision 
 ```
-We have to target and finish the CERTIFICATION by JUNE 2nd week anyhow! 
-COZ OCT is the crucial TIME for HIKEs!
+- [ ] Let's attempt the easy questions first.
+- [ ] Let's make a habit of 2hr session as the EXAM is for 2HOURs.
+
+
+Why is this important to me ?
+- [ ] This will create a strong case for GOOD hike 
+	- [ ] good impression in front of Himela/Vinay/Sathyabrata 
+	- [ ] will help me with a EASY small talk for a 50k REFUND for PHONE
+
+- [ ] Will free up my TIME to practice DSA questions
+- [ ] Will get me back my 20K 
+
 ```
 
-- [ ] ibrahimatay CKAD (https://github.com/ibrahimatay/CKAD-Exercises)
-	- [ ] till exercise-11!
+[[Lightning LAB 1]] 
+- [ ] Need to attempt 3/4/5 - 2nd JUL
+```
+- [ ] attempted once 
+- [ ] revise 
 
-- [ ] dgkanatsios CKAD (https://github.com/dgkanatsios/CKAD-exercises)
-	- [ ] 12 exercises!
+Topics covered in this LAB :- 
+- [ ] Persistent Volume + CLaim + Mount volume to POD
 
-- [ ] [[CKAD mock exam 2 - KodeKloud]]
-- [ ] Let's aggregate the LIST OF WEAK topics after all these and let's practise those AGAIN
+- [ ] Network Policy to allow incoming and outgoing connections
 
-###### Attempted ONCE 
-[[CKAD mock exam 1 - KodeKloud]]
+- [ ] Add Commands and Arguments + Create configmap
+
+- [ ] ROLLING UPATES 
+
+- [ ] Create a deployment which has 
+	- [ ] port
+	- [ ] CPU
+	- [ ] configmap
+	- [ ] volume 
+
+```
+[[Lightning LAB 2]] 
+
+```
+- [x] attempted once
+- [x] revise
+
+Topics covered in this LAB :- 
+
+- [ ] PROBEs related question
+
+- [ ] CRON Job and a bunch of configurations related to the JOB
+
+- [ ] Add secrets to the POD 
+
+- [ ] Creating an ingress for the services
+
+- [ ] Redirect LOGs to a file 
+
+kubectl logs dev-pod-dind-878516 (POD_NAME) -c log-x (CONTAINER_NAME) | grep WARNING > /opt/dind-878516_logs.txt (LOG_FILE_NAME)
+
+```
+
+[[CKAD mock exam 2 - KodeKloud]] 
+- [ ] NEED to attempt 
+	- [ ] 5/6/7/8/9
+```
+- [ ] 7/8/9 feels like DONE 
+- [ ] 1/2/3/4/5
+- [ ] Solve questions and CHECK solution
+
+9th question still inprogress
+
+```
+[[CKAD mock exam 1 - KodeKloud]] 
+- [ ] NEED to attempt 
+
+ibrahimatay CKAD (https://github.com/ibrahimatay/CKAD-Exercises)
+- [ ] till exercise-11!
+
+dgkanatsios CKAD (https://github.com/dgkanatsios/CKAD-exercises)
+- [ ] 12 exercises!
+
+- [ ] CKAD-Exercise-3
+- [ ] [[Reddit - CKAD - Questions]]
+
+
+- [ ] **END GOAL :** Give Killer.sh DEMO sessions 
+	- [ ] there are two of these. 
+	- [ ] buy more if needed to gain confidence
+
 
 ###### Re-attempt for REVISION
 - [ ] get more familiarised with KUBERNETES documentation.
@@ -49,7 +103,6 @@ COZ OCT is the crucial TIME for HIKEs!
 - [ ] Cluster IP related TOPIC
 - [ ] Security Contexts
 - [ ] Setting up ingress correctly 
-
 - [ ] Setting environment variables ? 
 	- [ ] let's refer documentation and try solving the UNKNOWN questions for a better brainstorming!
 

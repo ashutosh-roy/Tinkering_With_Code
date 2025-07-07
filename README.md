@@ -6,6 +6,12 @@ a.k.a my learning journal.
 
 ### System Design
 ____
+##### CKAD 
+HandsON-LABs-Link :- https://learn.kodekloud.com/user/courses/udemy-labs-certified-kubernetes-application-developer
+ashutoshroy@fico.com
+January@2025
+
+
 ##### HLD
 [Scale from Zero to Million Users](theory/SystemDesign/HLD/Alex-Xu-Vol1/chapter01/README.md)
 

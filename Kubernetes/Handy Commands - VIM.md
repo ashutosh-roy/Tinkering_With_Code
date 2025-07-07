@@ -9,6 +9,7 @@ beginning of one line -> ^
 | Scroll **one line down**    | j   |
 | Scroll **one line up**      | k   |
 | Scroll to **top of screen** | H   |
-
+yy       # copy current line
+p        # paste it below
 gg        → Go to first line  
 G         → Go to last line

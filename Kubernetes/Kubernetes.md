@@ -1,5 +1,7 @@
 ![[CKAD Manifestation.png]]
 
+[[CKAD EXAM Trivia]]
+[[CKAD - Questions for revision]]
 
 ######### **To Watch :-** 
 TIPs for cracking CKAD exam?
@@ -115,7 +117,20 @@ Issue is the
 ###### ***Deployments***
 ![[Pasted image 20250511124722.png]]
 
+**A deployment can be EXPOSED to the outside WORLD in this way :-**
+
+- **ClusterIP** – Exposes the service on an internal IP in the cluster; accessible only within the cluster.
+    
+- **ExternalName** – Maps the service to an external DNS name without creating a proxy.
+    
+- **LoadBalancer** – Exposes the service externally using a cloud provider’s load balancer.
+    
+- **NodePort** – Exposes the service on each node’s IP at a static port; accessible from outside the cluster via NodeIP:NodePort.
+
+
+
 **Command to create a deployment OR any other resource**
+
 	`k create deployment --help`
 
 
@@ -905,6 +920,33 @@ spec:
 ![[Pasted image 20250522082736.png]]
 
 ##### 6) State Persistance
+###### Recap 
+Persistence Volume vs Volume Mount vs Storage Class 
+
+| **Component** | **Stands for**        | **Who creates it**               | **What it represents**                                                                                     |
+| ------------- | --------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **PV**        | PersistentVolume      | Admin or dynamically provisioned | The **actual storage resource** (like a disk) in the cluster                                               |
+| **PVC**       | PersistentVolumeClaim | Developer/user                   | A **request** for storage by a pod                                                                         |
+| **sc**        | Storage Class         |                                  | Deployment creates and manages Pods, just as<br>StorageClass dynamically provisions PVs based on PVCs.<br> |
+
+Volume Claim related crucial syntax:- 
+```
+spec: 
+	containers: 
+    - name: nginx 
+      image: nginx: alpine
+      volumeMounts: 
+	  - name: VARIABLE_NAME 
+	    mountPath: /var/www/html
+    volumes: 
+      - name: 
+        persistentVolumeClaim: 
+	        claimName: local-pvc
+```
+
+*Handy Commands :-* 
+k get sc (storage class)
+
 ###### **Persistent volumes**
 1) ![[Pasted image 20250522091941.png]]
 
@@ -990,42 +1032,7 @@ spec:
 ```
 
 
-##### Practise Test Kubeconfig 
-1) ![[Pasted image 20250527075217.png]]
-Use the command `ls -a` and look for the kube config file under `/root/.kube`.
-
-2) ![[Pasted image 20250527081039.png]]
-kubectl config --kubeconfig=/root/my-kube-config use-context research
-
-3) ![[Pasted image 20250527081204.png]]
-
-![[Pasted image 20250527081220.png]]
-
-##### Practise Test Role based Access controls
-1) 
-![[Pasted image 20250609185720.png]]
-
-All of these authorization MODEs are found configured in `kube-apiserver-controlplane` inside `kube-system`
-
-Use the command `kubectl describe pod kube-apiserver-controlplane -n kube-system` and look for `--authorization-mode`.
-
-2) ![[Pasted image 20250609190308.png]]
-
-
-Use the command `kubectl get roles` to list the available `roles` in the `default` namespace.
-3) 
-![[Pasted image 20250609193824.png]]
-
-
-4) 
-![[Pasted image 20250609194210.png]]
-Run the command: `kubectl describe role kube-proxy -n kube-system`
-
-
-5) 
-![[Pasted image 20250609194426.png]]
-Run the command: `kubectl describe rolebinding kube-proxy -n kube-system`
-##### Practise Docker Labs
+##### 7.1) Practise Docker Labs
 
 1) ![[Pasted image 20250527074153.png]]
 
@@ -1041,7 +1048,238 @@ docker run -p 8282:8080 webapp-color
 
 docker build -t webapp-color:lte .
 
-##### 7) Lightning LABs
+
+##### 7.2) Practise Test Kubeconfig 
+1) ![[Pasted image 20250527075217.png]]
+Use the command `ls -a` and look for the kube config file under `/root/.kube`.
+
+2) ![[Pasted image 20250527081039.png]]
+kubectl config --kubeconfig=/root/my-kube-config use-context research
+
+3) ![[Pasted image 20250527081204.png]]
+
+![[Pasted image 20250527081220.png]]
+
+##### 7.3) Practise Test Role based Access controls
+###### Recap
+
+1) **Namespace `kube-system`**
+is where we get more information about ROLE Based access info in the cluster
+
+`kubectl describe pod kube-apiserver-controlplane -n kube-system`
+
+2) **To operate as a given user :-** 
+You can run whatever kubernetes command with this syntax 
+
+`k get pods` --as `dev-user`
+* k get pods - can be any other KUBERNETES cmd
+* --as - specifies the `dev-user`
+
+3) Create 
+```
+kubectl create role --help
+kubectl create rolebinding --help
+```
+
+4) EDIT 
+```
+kubectl edit role --help
+kubectl edit rolebinding --help
+```
+
+5) Describe 
+```
+kubectl describe role --help
+kubectl describe rolebinding --help
+```
+###### Questions
+1) 
+![[Pasted image 20250609185720.png]]
+
+All of these authorization MODEs are found configured in `kube-apiserver-controlplane` inside `kube-system`
+
+- [ ] Use the command `kubectl describe pod kube-apiserver-controlplane -n kube-system` and look for `--authorization-mode`.
+
+2) ![[Pasted image 20250609190308.png]]
+
+
+Use the command `kubectl get roles` to list the available `roles` in the `default` namespace.
+
+3) 
+![[Pasted image 20250609193824.png]]
+
+
+4) 
+![[Pasted image 20250609194210.png]]
+Run the command: `kubectl describe role kube-proxy -n kube-system`
+
+
+5) 
+![[Pasted image 20250609194426.png]]
+Run the command: `kubectl describe rolebinding kube-proxy -n kube-system`
+
+6) ![[Pasted image 20250630162108.png]]
+
+ 
+ 👉 **What kube-proxy typically does:**
+
+The kube-proxy component needs access only to its specific ConfigMap (usually named kube-proxy) so it can get its configuration.
+
+➡ It does **not** require permissions to view all ConfigMaps across the cluster.
+
+➡ It does **not** have broad access to all ConfigMaps in any namespace.
+
+  
+
+✅ The correct statement would be:
+
+- kube-proxy role can only view and update ConfigMap object by the name kube-proxy
+    
+- or
+    
+- kube-proxy role can get details of ConfigMap object by the name kube-proxy only
+ 
+ 7) ![[Pasted image 20250630162537.png]]
+
+**Concept**:- A Role Binding grants a given role to USERs, GROUPs or SERVICE Accounts
+
+Run the command: `kubectl describe rolebinding kube-proxy -n kube-system`
+
+8) ![[Pasted image 20250630163044.png]]
+To operate as a given user :- 
+You can run whatever kubernetes command with this syntax 
+
+`k get pods` --as `dev-user`
+* k get pods - can be any other KUBERNETES cmd
+* --as - specifies the `dev-user`
+
+9) ![[Pasted image 20250630163450.png]]
+
+To create a Role:- `kubectl create role developer --namespace=default --verb=list,create,delete --resource=pods`  
+  
+To create a RoleBinding:- `kubectl create rolebinding dev-user-binding --namespace=default --role=developer --user=dev-user`
+
+10) ![[Pasted image 20250630164842.png]]
+
+k edit role developer -n blue
+so the issue was that the resourceName specified was incorrect! 
+
+11) ![[Pasted image 20250630165424.png]]
+
+Be cautious that deployment will not have resourceNames!
+![[Pasted image 20250630165934.png]]
+
+
+##### 7.4) Practise Cluster Role based Access controls
+
+###### Recap 
+1) Cluster Roles are cluster wide and not part of any namespace.
+2) A smart-way to check CMD syntax is always 
+```
+kubectl create clusterrole --help
+kubectl create clusterrolebinding --help
+```
+
+>Remember this :-  will come in very handy during these count related questions. 
+
+3) `wc -l` - this means give me a total lines present in the output
+
+4) 
+```
+k describe clusterrole NAME 
+k describe clusterolebinding NAME 
+```
+###### Questions
+1) ![[Pasted image 20250630173503.png]]
+
+k get clusterroles | wc -l
+k get ClusterRoleBindings | wc -l
+
+
+2) ![[Pasted image 20250630173919.png]]
+
+k describe clusterrole cluster-admin
+Cluster Roles are cluster wide and not part of any namespace.
+
+3) ![[Pasted image 20250630174224.png]]
+k describe clusterrolebinding cluster-admin
+
+4) ![[Pasted image 20250630174542.png]]
+k describe clusterrole cluster-admin
+Performs any action on any resource in the cluster
+
+5) Create a new CLUSTEROLE and BINDING to help `michelle` access the NODEs in the cluster.
+
+kubectl create clusterrole node-reader --verb=get,list,watch --resource=nodes
+
+k create clusterrolebinding node-reader-bidning --clusterrole=node-reader --user=michelle
+
+
+6) ![[Pasted image 20250630175200.png]]
+
+k create clusterrole storage-admin --verb=get,list,watch --resource=persistentvolumes,storageclasses
+
+kubectl create clusterrolebinding michelle-storage-admin --clusterrole=storage-admin --user=michelle
+
+
+##### 7.5) Practise Admission Controller
+###### Recap
+Admission Controller - It is a piece of code in Kubernetes-api-server that intercepts every request to modify a K8 resource before any action is performed on that resource.
+
+**File Path for ADMISSION-CONTROLLER**
+`/etc/kubernetes/manifests/kube-apiserver.yaml`
+
+**CMD to check the process to see enabled and disabled plugins**
+`ps -ef | grep kube-apiserver | grep admission-plugins`
+
+###### Questions
+1) ![[Pasted image 20250630180541.png]]
+NamespaceAutoProvision
+
+2) ![[Pasted image 20250630180732.png]]
+
+Check `enable-admission-plugins` in `/etc/kubernetes/manifests/kube-apiserver.yaml`
+
+cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep admission
+
+>Answer:- NodeRestriction
+
+4) ![[Pasted image 20250630181325.png]]
+
+To enable namespace creation in a POD, we need to update `--enable-admission-plugins` to include `NamespaceAutoProvision`
+
+5) ![[Pasted image 20250630181528.png]]
+
+6) Edit kube-apiserver.yaml FILE and add- --disable-admission-plugins=DefaultStorageClass
+
+7) ![[Pasted image 20250630182642.png]]
+
+##### 7.6) Validate and Mutate Admission Controller
+
+##### 7.7) Validate and Mutate Admission Controller
+
+##### 7.8) Lab - API Versions/Deprecations
+
+##### 7.9) Practice Test - Custom Resource Definition
+
+##### 7.10) Practice Test - Deployment strategies
+
+##### 7.11) Labs - Install Helm
+
+##### 7.12) Labs - Helm Concepts
+
+##### 7.13) Lab - Managing Directories 🆕
+
+##### 7.14) Lab - Transformers 🆕
+
+##### 7.15) Lab - Patches 🆕
+
+##### 7.16) Lab - Overlay 🆕
+
+##### 7.17) Lab - Components 🆕
+
+
+##### 8) Lightning LABs
 
 I think practical for me will also be to study and test the SVC URLs inside different PODs
 
