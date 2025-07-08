@@ -29,7 +29,7 @@ Topics covered in this LAB :-
 
 - [ ] Add Commands and Arguments + Create configmap
 
-- [ ] ROLLING UPATES 
+- [ ] ROLLING UPDATES 
 
 - [ ] Create a deployment which has 
 	- [ ] port
@@ -64,8 +64,15 @@ kubectl logs dev-pod-dind-878516 (POD_NAME) -c log-x (CONTAINER_NAME) | grep WAR
 - [ ] NEED to attempt 
 	- [ ] 5/6/7/8/9
 ```
+- [ ] For 1st
+	- [ ] which one is CORRECT ? 
+- [ ] 
+
+
+
 - [ ] 7/8/9 feels like DONE 
 - [ ] 1/2/3/4/5
+
 - [ ] Solve questions and CHECK solution
 
 9th question still inprogress
