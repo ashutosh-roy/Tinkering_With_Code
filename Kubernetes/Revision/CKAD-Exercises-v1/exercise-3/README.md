@@ -6,6 +6,57 @@ You are tasked to create a secret and consume the secret in a pod using environm
 - Start an nginx pod named nginx-secret using container image nginx, and add an environment variable exposing the value of the secret key key 1,
 using COOL_VARIABLE as the name for the environment variable inside the pod
 
+# Current Sol
+
+k create secret generic another-secret --from-literal=key1=value4
+
+```
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+  creationTimestamp: null
+
+  labels:
+
+    run: pod
+
+  name: nginx-secret
+
+spec:
+
+  containers:
+
+  - args:
+
+    - nginx-secret
+
+    image: nginx
+
+    name: pod
+
+    resources: {}
+
+    env:
+
+    - name: COOL_VARIABLE
+
+      valueFrom:
+
+        secretKeyRef:
+
+          name: another-secret
+
+          key: key1
+
+  dnsPolicy: ClusterFirst
+
+  restartPolicy: Always
+
+status: {}
+```
 # Solution
 
 ## Step 1

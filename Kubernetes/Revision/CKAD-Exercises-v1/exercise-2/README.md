@@ -6,6 +6,9 @@ You sometimes need to observe a pod's logs and write those logs to a file for fu
 - Retrieve all currently available application logs from the running pod and store them in the file
 log_Output.txt, which has already been created
 
+
+# Current Sol
+k logs counter > counter_logs.txt
 # Solution
 
 ## Step 1

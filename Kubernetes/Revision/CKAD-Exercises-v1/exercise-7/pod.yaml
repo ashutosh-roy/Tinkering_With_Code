@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: cache
+  name: cache
+  namespace: web
+spec:
+  containers:
+  - image: lfccncf/redis:3.2
+    name: cache
+    ports:
+    - containerPort: 6379
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

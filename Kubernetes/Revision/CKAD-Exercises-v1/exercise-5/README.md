@@ -8,6 +8,9 @@ A project that you are working on has a requirement for persistent data to be av
 - Create a pod that uses the PersistentVolumeClaim as a volume with a label app: my-storage-app mounting the resulting volume to a mountPath
 /usr/share/nginx/html inside the pod
 
+# Current 
+
+
 # Solution
 
 ## Step 1

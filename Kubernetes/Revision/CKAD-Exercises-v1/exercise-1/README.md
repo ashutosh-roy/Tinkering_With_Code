@@ -8,6 +8,9 @@ Create a new deployment for running.nginx with the following parameters;
 - Configure the pod with a container image of lfccncf/nginx:1.13.7
 - Set an environment variable of NGINX_PORT=8080 and also expose that port for the container above.
 
+
+
+
 # Solution
 
 ## Step 1

@@ -3,6 +3,11 @@
 [[CKAD EXAM Trivia]]
 [[CKAD - Questions for revision]]
 
+[[Handy Commands - VIM]]
+[[Handy Commands - Helm]]
+[[Handy Commands - Grep]]
+
+
 ######### **To Watch :-** 
 TIPs for cracking CKAD exam?
 https://youtu.be/tS2S926PriQ?si=fCVvKo8eEbrYoy5w
@@ -23,7 +28,7 @@ https://fico.udemy.com/course/certified-kubernetes-application-developer/
 #### Kubernetes CKAD 
 ##### 1) Core Concepts 
 
-####### ***Pods***
+###### ***Pods***
 1) Create a new pod with the `nginx` image.
 
 [[Imperative vs Declarative]]
@@ -423,7 +428,7 @@ spec:
 ![[Pasted image 20250510210709.png]]
 
 
-####### ***Resource Limits***
+####### *Resource Limits*
 This can be completed with the above knowledge but we should still be aware of the syntax
 
 ```
@@ -1256,18 +1261,316 @@ To enable namespace creation in a POD, we need to update `--enable-admission-plu
 
 ##### 7.6) Validate and Mutate Admission Controller
 
-##### 7.7) Validate and Mutate Admission Controller
+1) ![[Pasted image 20250710120414.png]]
+
+> **NamespaceAutoProvision – Mutating**, **NamespaceExists – Validating**
+
+
+📌 Mutating Admission Controllers:
+
+These can modify the incoming request object before it is persisted in etcd.
+	•	NamespaceAutoProvision is responsible for automatically creating a namespace if it doesn’t exist, which is a mutation of the system state.
+	•	Hence, it’s a mutating admission controller.
+
+📌 Validating Admission Controllers:
+
+These validate the request, and can only accept or reject — they cannot change anything.
+	•	NamespaceExists ensures the namespace exists before allowing an object to be created in it.
+	•	It only checks — does not mutate — so it’s a validating admission controller.
+
+
+2) ![[Pasted image 20250710121107.png]]
+
+✅ Correct Answer:
+
+First Mutating then Validating
+
+⸻
+
+🧠 Why?
+
+Kubernetes follows a strict order when invoking admission controllers:
+	1.	Mutating Admission Controllers run first
+🛠 They can modify the incoming request (e.g., add labels, inject sidecars).
+	2.	Validating Admission Controllers run after
+✅ They validate the (possibly modified) object and must either accept or reject it.
+
+⸻
+
+3) ![[Pasted image 20250710121541.png]]
+
+kubectl create secret tls webhook-server-tls --cert=/root/keys/webhook-server-tls.crt --key=/root/keys/webhook-server-tls.key -n webhook-demo
+
+4) ![[Pasted image 20250710121818.png]]
+
+
+5) ![[Pasted image 20250710122115.png]]
+
+
+6) ![[Pasted image 20250710122732.png]]
+
+kubectl get po pod-with-defaults -o yaml | grep -A2 " securityContext:"
+
+![[Pasted image 20250710122947.png]]
+
+Error from server: error when creating "/root/pod-with-conflict.yaml": admission webhook "webhook-server.webhook-demo.svc" denied the request: runAsNonRoot specified, but runAsUser set to 0 (the root user)
 
 ##### 7.8) Lab - API Versions/Deprecations
 
+```
+kubectl api-resources is the important COMMAND here.
+```
+
+1) ![[Pasted image 20250713132710.png]]
+
+deployments - deploy
+replicasets - rs
+cronjobs - cj
+customresourcedefinitions - crd
+
+
+2) ![[Pasted image 20250713133100.png]]
+
+`<major>.<minor>.<patch>`
+So:
+
+- **Major** version = 1
+    
+- **Minor** version = 22
+    
+- ✅ **Patch** version = 2
+
+
+
+3) ![[Pasted image 20250713133240.png]]
+kubectl api-resources | grep -w job
+
+
+4) ![[Pasted image 20250713133747.png]]
+
+
+ k api-resources | grep "authorization"
+
+
+
+5) ![[Pasted image 20250713134000.png]]
+
+As a good practice, **take a backup of that apiserver manifest file before going to make any changes.**
+
+In case, if anything happens due to misconfiguration you can replace it with the backup file.
+
+```
+cp -v /etc/kubernetes/manifests/kube-apiserver.yaml /root/kube-apiserver.yaml.backup
+```
+
+```
+vi /etc/kubernetes/manifests/kube-apiserver.yaml
+```
+
+Add the --runtime-config flag in the command field as follows :-
+
+ - command:
+    - kube-apiserver
+    - --advertise-address=10.18.17.8
+    - --allow-privileged=true
+    - --authorization-mode=Node,RBAC
+    - --client-ca-file=/etc/kubernetes/pki/ca.crt
+    - --enable-admission-plugins=NodeRestriction
+    - --enable-bootstrap-token-auth=true
+    - --runtime-config=rbac.authorization.k8s.io/v1alpha1 --> This one 
+
+After that kubelet will detect the new changes and will recreate the apiserver pod.
+
+It may take some time.
+
+```
+root@controlplane:~# kubectl get po -n kube-system
+```
+
+Check the status of the apiserver pod. It should be in running condition.
+
+
+5) 
+
+
+6) 
 ##### 7.9) Practice Test - Custom Resource Definition
+
+
+###### Recap
+```
+k get crd
+k describe crd collectors.monitoring.controller 
+```
+
+
+**Shortnames :-** 
+like how we have rs for ReplicaSet. We can create custom shortnames for our CUSTOM RESOURCE DEFINITIONS 
+###### Questions 
+
+1) ![[Pasted image 20250714094726.png]]
+
+A CRD can be either `namespaced` or `cluster-scoped`. When you create a `CRD`, you can specify its scope in the `spec.scope` field of the CRD manifest.
+
+
+2) ![[Pasted image 20250714100306.png]]
+
+Simply follow the instructions here. 
+Let's make sure that the group Name is CORRECT!
+
+3) ![[Pasted image 20250714105716.png]]
+
+```
+k get crd
+k describe crd collectors.monitoring.controller 
+```
+
+
+
+4) ![[Pasted image 20250714100807.png]]
+So this CONTROLLER CRD already exists and we just have to CREATE a controller TYPE.
+
+
+```
+kind: Global
+apiVersion: traffic.controller/v1
+metadata:
+  name: datacenter
+spec:
+  dataField: 2
+  access: true
+```
+
+5) ![[Pasted image 20250714105750.png]]
+
+`k describe crd collectors.monitoring.controller`
+
+**Shortnames :-** 
+like how we have rs for ReplicaSet. We can create custom shortnames for our CUSTOM RESOURCE DEFINITIONS 
 
 ##### 7.10) Practice Test - Deployment strategies
 
+- [ ] Add 3 and 5 questions at the TOP 
+- [ ] At 10:45 let's listen to terebina 
+
+###### RECAP
+k scale deployment --replicas=0 frontend
+
+###### Questions 
+1) ![[Pasted image 20250714102601.png]]
+
+```
+k describe deployments.apps frontend | grep "strategy"
+```
+
+2)  ![[Pasted image 20250714103428.png]]
+
+The `frontend-v2` deployment currently has 2 replicas. The `frontend` service now routes traffic to 7 pods in total ( 5 replicas on the `frontend` deployment and 2 replicas from `frontend-v2` deployment).
+
+Since the service distributes traffic to all pods equally, in this case, approximately 29% of the traffic will go to `frontend-v2` deployment.
+  
+To reduce this below 20%, scale down the pods on the v2 version to the minimum possible replicas = `1`.
+
+Run: `kubectl scale deployment --replicas=1 frontend-v2`
+
+Once this is done, only ~17% of traffic should go to the v2 version.
+
+3) ![[Pasted image 20250714105241.png]]
+
+controlplane ~ ➜  k scale deployment --replicas=0 frontend
+deployment.apps/frontend scaled
+
+controlplane ~ ➜  k scale deployment --replicas=5 frontend-v2
+deployment.apps/frontend-v2 scaled
+
+controlplane ~ ➜  k get deployments.apps 
+NAME          READY   UP-TO-DATE   AVAILABLE   AGE
+frontend      0/0     0            0           29m
+frontend-v2   5/5     5            5           18m
+
 ##### 7.11) Labs - Install Helm
+
+###### RECAP 
+
+
+###### Questions
+1) ![[Pasted image 20250715164738.png]]
+Run the command `cat /etc/*release*` and identify the name of the operating system.
+
+2) ![[Pasted image 20250715214726.png]]
+
+
+
+
+3) 
+
+helm -h | grep "env"
+
+4) ![[Pasted image 20250715222242.png]]
+
+>helm version
+
+5) ![[Pasted image 20250715222428.png]]
+
+>helm -h | grep "verbose"
 
 ##### 7.12) Labs - Helm Concepts
 
+###### RECAP 
+HELP Command comes in really HANDY whenever you're guessing on the COMMAND
+```
+helm -h | grep -i "Download"
+helm pull bitnami/apache
+```
+
+
+```
+helm search hub 
+helm search repo whatever_NAME
+helm repo list
+helm uninstall RELEASE_NAME
+```
+
+###### Questions
+1) ![[Pasted image 20250715222606.png]]
+
+helm search hub wordpress
+
+2) ![[Pasted image 20250715222929.png]]
+
+Run the command: `helm repo add bitnami https://charts.bitnami.com/bitnami`
+
+3) ![[Pasted image 20250715223353.png]]
+
+helm search repo joomla
+
+4) ![[Pasted image 20250715223629.png]]
+
+helm repo list
+
+5) ![[Pasted image 20250715223831.png]]
+
+helm install bravo bitnami/drupal
+helm list
+![[Pasted image 20250715223902.png]]
+
+6) ![[Pasted image 20250715224426.png]]
+Once you have modified the `values.yaml` file , run the below command to install the `apache` package on the `controlplane` node:
+
+```shell
+root@controlplane:~# helm install mywebapp ./apache
+```
+
+After installation, run the below command to list the `mywebapp` release:
+
+```shell
+
+root@controlplane:~# helm list     
+NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART            APP VERSION
+mywebapp        default         1               2024-12-03 14:11:17.237760871 +
+```
+
+7) 
 ##### 7.13) Lab - Managing Directories 🆕
 
 ##### 7.14) Lab - Transformers 🆕
@@ -1277,7 +1580,6 @@ To enable namespace creation in a POD, we need to update `--enable-admission-plu
 ##### 7.16) Lab - Overlay 🆕
 
 ##### 7.17) Lab - Components 🆕
-
 
 ##### 8) Lightning LABs
 

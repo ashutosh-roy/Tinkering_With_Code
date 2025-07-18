@@ -1,12 +1,7 @@
 [[CKAD EXAM Trivia]]
 [[Kubernetes]]
-###### Revision 
-```
-- [ ] Let's attempt the easy questions first.
-- [ ] Let's make a habit of 2hr session as the EXAM is for 2HOURs.
+###### Why is CKAD important
 
-
-Why is this important to me ?
 - [ ] This will create a strong case for GOOD hike 
 	- [ ] good impression in front of Himela/Vinay/Sathyabrata 
 	- [ ] will help me with a EASY small talk for a 50k REFUND for PHONE
@@ -14,13 +9,89 @@ Why is this important to me ?
 - [ ] Will free up my TIME to practice DSA questions
 - [ ] Will get me back my 20K 
 
+
+###### Revision 
+Week 14th - 20th
+- [ ] Let's finish Updates MODULE from KODEKLOUD
+
+- [ ] ibrahimatay CKAD (https://github.com/ibrahimatay/CKAD-Exercises)
+	- [ ] CKAD-Exercises-v1
+	- [ ] Check THE answers I think I didnot answer most of them correctly! 
+	- [ ] let's make notes in the form of FLASH Cards
+	- [ ] You know at the END of KODEKLOUD course completion I should really ask NOTEBOOK LLM to aggregate the commands and questions depending on the TOPIC as per the KUBERNETES syllabus.
+	- [ ] Reattempt this test again TOMORROW!
+```
+9:09: started 
+9:51: Coffee Break
+1Hr 15 mins but try completing 1HR 
+11 questions
+9 mins Q5
 ```
 
-[[Lightning LAB 1]] 
-- [ ] Need to attempt 3/4/5 - 2nd JUL
+- [ ] dgkanatsios CKAD (https://github.com/dgkanatsios/CKAD-exercises)
+	- [ ] 12 exercises!
+
+- [ ] CKAD-Exercise-3
+
+- [ ] [[Reddit - CKAD - Questions]]
+
+- [ ] let's make RECAP notes along the WAY! 
+
+
+
+Week 21st - 27th
+- [ ] Let's give the Mock Exam 1 & 2 and Lightning Lab 1 & 2
+- [ ] Let's give the two Mock Killer.SH sessions 
+
+Week 27th - 27th
+
+
+
+###### Flashcards 
+
+***Run as ROOT :-***
 ```
-- [ ] attempted once 
+securityContext:
+	runAsUser: 0 
+```
+
+***Aggregating logs :-***
+kubectl logs dev-pod-dind-878516 (POD_NAME) -c log-x (CONTAINER_NAME) | grep WARNING > /opt/dind-878516_logs.txt (LOG_FILE_NAME)
+
+***Setting environment variables and labels as an imperative command :-***
+* Create configmap 
+k create configmap name --from-literal=key=value
+
+* Create secret 
+k create secret name --from-literal=key=value
+
+***MB is written as Mi and GB as Gi***
+
+
+###### Exams
+
+[[CKAD-Exercise-v1]](https://github.com/ibrahimatay/CKAD-Exercises)
+- [ ] till exercise-11!
+
+```
+let's go! - 30 mins --- 11 questions 
+11:38 - 
+
+Could solve 4 with making notes
+```
+
+- [ ] dgkanatsios CKAD (https://github.com/dgkanatsios/CKAD-exercises)
+	- [ ] 12 exercises!
+
+- [ ] CKAD-Exercise-3
+
+- [ ] [[Reddit - CKAD - Questions]]
+
+
+[[Lightning LAB 1]] 
+- [x] attempted once 
 - [ ] revise 
+```
 
 Topics covered in this LAB :- 
 - [ ] Persistent Volume + CLaim + Mount volume to POD
@@ -39,56 +110,34 @@ Topics covered in this LAB :-
 
 ```
 [[Lightning LAB 2]] 
-
-```
 - [x] attempted once
-- [x] revise
-
+- [ ] revise
+```
 Topics covered in this LAB :- 
 
 - [ ] PROBEs related question
-
 - [ ] CRON Job and a bunch of configurations related to the JOB
-
 - [ ] Add secrets to the POD 
-
 - [ ] Creating an ingress for the services
-
 - [ ] Redirect LOGs to a file 
-
-kubectl logs dev-pod-dind-878516 (POD_NAME) -c log-x (CONTAINER_NAME) | grep WARNING > /opt/dind-878516_logs.txt (LOG_FILE_NAME)
 
 ```
 
 [[CKAD mock exam 2 - KodeKloud]] 
-- [ ] NEED to attempt 
-	- [ ] 5/6/7/8/9
+- [x] attempted once 
+- [ ] revise 
 ```
-- [ ] For 1st
-	- [ ] which one is CORRECT ? 
-- [ ] 
-
-
-
-- [ ] 7/8/9 feels like DONE 
-- [ ] 1/2/3/4/5
-
-- [ ] Solve questions and CHECK solution
-
-9th question still inprogress
+Topics covered in this LAB :- 
 
 ```
 [[CKAD mock exam 1 - KodeKloud]] 
-- [ ] NEED to attempt 
+- [x] attempted once 
+- [ ] revise 
+```
+Topics covered in this LAB :- 
 
-ibrahimatay CKAD (https://github.com/ibrahimatay/CKAD-Exercises)
-- [ ] till exercise-11!
+```
 
-dgkanatsios CKAD (https://github.com/dgkanatsios/CKAD-exercises)
-- [ ] 12 exercises!
-
-- [ ] CKAD-Exercise-3
-- [ ] [[Reddit - CKAD - Questions]]
 
 
 - [ ] **END GOAL :** Give Killer.sh DEMO sessions 

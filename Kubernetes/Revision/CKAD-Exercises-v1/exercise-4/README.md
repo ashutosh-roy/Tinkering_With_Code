@@ -7,6 +7,45 @@ Anytime a team needs to run a container on Kubernetes they will need to define a
 - When the pod is running display summary data about the pod in JSON format using the `kubectl` command and redirect the output to a file named out1.json
 - All of the files you need to work with have been created, empty, for your convenience
 
+# Current
+```
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+  creationTimestamp: null
+
+  labels:
+
+    run: app1
+
+  name: app1
+
+spec:
+
+  containers:
+
+  - image: ifccncf/arg-output
+
+    name: app1
+
+    resources: {}
+
+    command: ["/bin/sh"]
+
+    args: ["-lines", "56", "-F"]
+
+  dnsPolicy: ClusterFirst
+
+  restartPolicy: Always
+
+status: {}
+```
+
+k get pod app1 -o json > out1.json
+
 # Solution
 
 ## Step 1
