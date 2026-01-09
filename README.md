@@ -183,7 +183,7 @@ ___
 
 ___
 ### Dynamic Programming 
-
+[Intro](theory/dsa/Dynamic Programming/What_is_it.md)
 ##### 0-1 Knapsack 	
 * [Subset Sum](theory/dsa/Dynamic Programming/SubSetSum.md)
 * [Equal Sum Partition](theory/dsa/Dynamic Programming/EqualSumPartitionProblem.md)
